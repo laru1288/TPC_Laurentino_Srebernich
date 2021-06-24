@@ -11,7 +11,7 @@ namespace TPC_Laurentino_Srebernich
 {
 
 
-    public partial class _Default
+    public partial class WebForm1
     {
     }
 }
