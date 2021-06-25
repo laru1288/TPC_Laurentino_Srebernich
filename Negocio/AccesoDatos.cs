@@ -15,7 +15,7 @@ namespace Negocio
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("data source = (local)\\SQLEXPRESS; initial catalog= CATALOGO_DB; integrated security = true;");
+            conexion = new SqlConnection("data source = (local)\\SQLEXPRESS; initial catalog= Laurentino_Srebernich_DB; integrated security = true;");
             comando = new SqlCommand();
 
         }

@@ -150,3 +150,7 @@ E:\UTN\PROG 3\TP FINAL\TPC_Laurentino_Srebernich\obj\Debug\TPC_Laurentino_Sreber
 E:\UTN\PROG 3\TP FINAL\TPC_Laurentino_Srebernich\obj\Debug\TPC_Laurentino_Srebernich.csproj.CopyComplete
 E:\UTN\PROG 3\TP FINAL\TPC_Laurentino_Srebernich\obj\Debug\TPC_Laurentino_Srebernich.dll
 E:\UTN\PROG 3\TP FINAL\TPC_Laurentino_Srebernich\obj\Debug\TPC_Laurentino_Srebernich.pdb
+E:\UTN\PROG 3\TP FINAL\TPC_Laurentino_Srebernich\bin\Dominio.dll
+E:\UTN\PROG 3\TP FINAL\TPC_Laurentino_Srebernich\bin\Negocio.dll
+E:\UTN\PROG 3\TP FINAL\TPC_Laurentino_Srebernich\bin\Dominio.pdb
+E:\UTN\PROG 3\TP FINAL\TPC_Laurentino_Srebernich\bin\Negocio.pdb

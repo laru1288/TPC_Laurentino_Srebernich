@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    class Producto  {
+   public class Producto  {
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public string Imagen_principal { get; set; }
@@ -28,8 +28,8 @@ namespace Dominio
         public Sexo Sexo { get; set; }
         public Categoria Categorias { get; set; }       
         public int ID { get; set; }
-        public Producto() {
+        /*public Producto() {
 
-        }
+        }*/
     }
 }
