@@ -1,0 +1,9 @@
+E:\UTN\PROG 3\TP FINAL\Negocio\bin\Debug\Negocio.dll
+E:\UTN\PROG 3\TP FINAL\Negocio\bin\Debug\Negocio.pdb
+E:\UTN\PROG 3\TP FINAL\Negocio\bin\Debug\Dominio.dll
+E:\UTN\PROG 3\TP FINAL\Negocio\bin\Debug\Dominio.pdb
+E:\UTN\PROG 3\TP FINAL\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+E:\UTN\PROG 3\TP FINAL\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+E:\UTN\PROG 3\TP FINAL\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+E:\UTN\PROG 3\TP FINAL\Negocio\obj\Debug\Negocio.dll
+E:\UTN\PROG 3\TP FINAL\Negocio\obj\Debug\Negocio.pdb
