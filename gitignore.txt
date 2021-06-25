@@ -1,0 +1,7 @@
+TPC-Prog3\TPC_Laurentino_Srebernich\obj
+TPC-Prog3\TPC_Laurentino_Srebernich\bin
+TPC-Prog3\Dominio\obj
+TPC-Prog3\Dominio\bin
+TPC-Prog3\Negocio\obj
+TPC-Prog3\Negocio\bin
+
