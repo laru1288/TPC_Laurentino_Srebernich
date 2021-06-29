@@ -7,10 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-namespace TPC_Laurentino_Srebernich
-{
-    public partial class Contacto
-    {
+namespace TPC_Laurentino_Srebernich {
+    
+    
+    public partial class Editar {
     }
 }
