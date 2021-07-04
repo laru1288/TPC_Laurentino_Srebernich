@@ -4,9 +4,11 @@
     <br />
     <br />
     <br />
-    <form>
-  <fieldset enable>
-    <legend>Agregar nuevo Producto</legend>
+   
+    
+    <fieldset enable="true"> 
+     <asp:label for="leyenda" class="form-label" runat="server">Agregar nuevo Producto  </asp:label>
+ 
     <div class="mb-3">
       <asp:label for="Nombre" class="form-label" runat="server">Nombre  </asp:label>
         <asp:TextBox id="textNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
@@ -63,72 +65,52 @@
      </div>
     <div class="mb-3">
           <asp:label for="Nombre" class="form-label" runat="server">Categoria  </asp:label>
-            <asp:DropDownList ID="DdlMonths" runat="server" class="form-select">
-            <asp:ListItem Enabled="true" Text="Selecionar categoria" Value="-1"></asp:ListItem>
-            <asp:ListItem Text="January" Value="1"></asp:ListItem>
-            <asp:ListItem Text="February" Value="2"></asp:ListItem>
-            <asp:ListItem Text="December" Value="12"></asp:ListItem>
+            <asp:DropDownList ID="D_Categoria" runat="server" class="form-select" datatextfield="Id"
+        datavaluefield="Nombre" >
+            
         </asp:DropDownList>
     </div>
     <div class="mb-3">
             <asp:label for="Nombre" class="form-label" runat="server">Marca  </asp:label>
-            <asp:DropDownList ID="DropDownList1" runat="server" class="form-select">
-            <asp:ListItem Enabled="true" Text="Selecionar marca" Value="-1"></asp:ListItem>
-            <asp:ListItem Text="January" Value="1"></asp:ListItem>
-            <asp:ListItem Text="February" Value="2"></asp:ListItem>
-            <asp:ListItem Text="December" Value="12"></asp:ListItem>
+            <asp:DropDownList ID="D_Marcas" runat="server" class="form-select" datatextfield="Id"
+        datavaluefield="Nombre" >
+            
         </asp:DropDownList>
     </div>
     <div class="mb-3">
          <asp:label for="Nombre" class="form-label" runat="server">Talle  </asp:label>
-            <asp:DropDownList ID="DropDownList2" runat="server" class="form-select">
-            <asp:ListItem Enabled="true" Text="Selecionar talle" Value="-1"></asp:ListItem>
-            <asp:ListItem Text="January" Value="1"></asp:ListItem>
-            <asp:ListItem Text="February" Value="2"></asp:ListItem>
-            <asp:ListItem Text="December" Value="12"></asp:ListItem>
+            <asp:DropDownList ID="D_Talle" runat="server" class="form-select" datatextfield="Id"
+        datavaluefield="Nombre">
+            
         </asp:DropDownList>
     </div>
   <div class="mb-3">
          <asp:label for="Nombre" class="form-label" runat="server">Color  </asp:label>
-            <asp:DropDownList ID="DropDownList3" runat="server" class="form-select">
-            <asp:ListItem Enabled="true" Text="Selecionar Color" Value="-1"></asp:ListItem>
-            <asp:ListItem Text="January" Value="1"></asp:ListItem>
-            <asp:ListItem Text="February" Value="2"></asp:ListItem>
-            <asp:ListItem Text="December" Value="12"></asp:ListItem>
+            <asp:DropDownList ID="D_Color1" runat="server" class="form-select" datatextfield="Id"
+        datavaluefield="Nombre" >
+            
         </asp:DropDownList>
     </div>
     <div class="mb-3">
          <asp:label for="Nombre" class="form-label" runat="server">Color  secundario </asp:label>
-            <asp:DropDownList ID="DropDownList4" runat="server" class="form-select">
-            <asp:ListItem Enabled="true" Text="Selecionar Color secundario" Value="-1"></asp:ListItem>
-            <asp:ListItem Text="January" Value="1"></asp:ListItem>
-            <asp:ListItem Text="February" Value="2"></asp:ListItem>
-            <asp:ListItem Text="December" Value="12"></asp:ListItem>
+            <asp:DropDownList ID="D_Color2" runat="server" class="form-select" datatextfield="Id"
+        datavaluefield="Nombre" >
+           
         </asp:DropDownList>
     </div>
-      <div class="mb-3">
-         <asp:label for="Nombre" class="form-label" runat="server">Color  terciario </asp:label>
-            <asp:DropDownList ID="DropDownList5" runat="server" class="form-select">
-            <asp:ListItem Enabled="true" Text="Selecionar Color terciario" Value="-1"></asp:ListItem>
-            <asp:ListItem Text="January" Value="1"></asp:ListItem>
-            <asp:ListItem Text="February" Value="2"></asp:ListItem>
-            <asp:ListItem Text="December" Value="12"></asp:ListItem>
-        </asp:DropDownList>
-    </div>
-        <div class="mb-3">
+       <div class="mb-3">
          <asp:label for="Nombre" class="form-label" runat="server">Sexo </asp:label>
-            <asp:DropDownList ID="DropDownList6" runat="server" class="form-select">
-            <asp:ListItem Enabled="true" Text="Selecionar Sexo" Value="-1"></asp:ListItem>
-            <asp:ListItem Text="January" Value="1"></asp:ListItem>
-            <asp:ListItem Text="February" Value="2"></asp:ListItem>
-            <asp:ListItem Text="December" Value="12"></asp:ListItem>
+            <asp:DropDownList ID="D_Sexo" runat="server" class="form-select"  datatextfield="Id"
+        datavaluefield="Nombre" >
+            
         </asp:DropDownList>
     </div>
      
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </fieldset>
-</form>
+    <asp:button type="submit" text="Agregar" ID="B_agregar" class="btn btn-primary" runat="server" Onclick="Agregar_nuevo" />
+      
+
+</fieldset>
 
 
 

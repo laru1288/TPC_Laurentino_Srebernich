@@ -42,9 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="CategoriaNegocio.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="ColorNegocio.cs" />
     <Compile Include="Consulta.cs" />
+    <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SexoNegocio.cs" />
+    <Compile Include="TalleNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj">
