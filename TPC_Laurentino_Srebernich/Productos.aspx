@@ -11,7 +11,7 @@
                       <div class ="card-body">
                           <h5 class ="card-title"> <%= item.Nombre %></h5>
                           <p class="card-text"><%= item.Precio.ToString("0.00") %></p>
-                          <a href="Detalleproducto.aspx?id=<%=item.ID %>" class="btn btn-primary">Ver detalle</a>
+                          <a href="Detalle.aspx?id=<%=item.ID %>" class="btn btn-primary">Ver detalle</a>
                       </div>
                   </div>
               </div>             

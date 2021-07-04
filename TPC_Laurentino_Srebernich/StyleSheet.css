@@ -64,20 +64,24 @@ nav {
 
 
 
-
-
-
 footer {
     background-color: #7DB6AD;
-    position:sticky absolute;
+    position:fixed;
     bottom: 0;
     height: 60px;
     width: 100%;
     font-size: large;
-    text-align:center;
     display:flex;
     
 }
+
+
+
+
+ 
+
+
+
 
     
 
