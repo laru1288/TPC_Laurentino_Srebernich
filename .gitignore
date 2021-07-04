@@ -1,6 +1,7 @@
-TP FINAL\TPC_Laurentino_Srebernich\obj
-TP FINAL\TPC_Laurentino_Srebernich\bin
-TP FINAL\Dominio\obj
-TP FINAL\Dominio\bin
-TP FINAL\Negocio\obj
-TP FINAL\Negocio\bin
+.\TPC_Laurentino_Srebernich\obj
+.\TPC_Laurentino_Srebernich\bin
+.\Dominio\obj
+.\Dominio\bin
+.\Negocio\obj
+.\Negocio\bin
+.\TPC_Laurentino_Srebernich\.vs

@@ -24,7 +24,6 @@ namespace Dominio
         public Talle Talle { get; set; }
         public Color Color { get; set; }
         public Color Color_2 { get; set; }
-        public Color Color_3 { get; set; }
         public Sexo Sexo { get; set; }
         public Categoria Categorias { get; set; }       
         public int ID { get; set; }

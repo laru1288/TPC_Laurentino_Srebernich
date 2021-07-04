@@ -17,7 +17,7 @@ namespace TPC_Laurentino_Srebernich
             try
             {
                 lista = negocio.consulta();
-                Session.Add("listaproduct", lista);
+               // Session.Add("listaproduct", lista);
             }
             catch (Exception ex)
             {

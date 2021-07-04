@@ -9,6 +9,8 @@ CREATE TABLE Talle(
 )
 go
 
+drop database Laurentino_Srebernich_DB
+
 create table Marca (
 	ID int primary key not null,
 	Nombre varchar(20) not null
@@ -68,7 +70,7 @@ insert into Producto values ('Campera', '',5,3,3,4,6,4,1,'\Imagenes\Campera_algo
 insert into Producto values ('Buzo', '',5,3,3,4,6,4,1,'\Imagenes\Buzo_algodon_adidas.jpeg','','', 1700,'',10,'','',0,1,0 )
 insert into Producto values ('Boxer', '',5,3,3,4,6,4,1,'\Imagenes\Boxer_algodon_tommy_hilfiger.jpeg','','', 1700,'',10,'','',0,1,0 )
 insert into Producto values ('Pantalon deportivo', 'microfriba, elastizado, chupin',3,3,3,4,6,4,1,'\Imagenes\pantalon_deportiva_nike2.jpeg','\Imagenes\Pantalon_deportivo_nike.jpeg','', 1700,'',10,'','',0,1,0 )
-insert into Producto values ('Calza termica', '',3,9,3,1,4,4,2,'\Imagenes\Calza_termica.jpeg','','', 2000,'',10,'','',0,1,0 )
+insert into Producto values ('lalalalalala', 'lalalalala',1,2,3,4,4,4,2,'\Imagenes\Calza_termica.jpeg','','', 10000,'',100,'','',0,1,0 )
 
 
 
@@ -104,5 +106,11 @@ left join Sexo as s on s.ID = p.IdSexo left join Categoria as cat on cat.ID = p.
 
 delete from Producto
 drop TABLE Producto
---arreglar ID unico 
-alter table Producto modify ID int  NOT NULL IDENTITY(1,1) primary key
+--arreglar ID unico
+select * from Producto
+
+insert into Producto (Nombre, Descripcion, IdMarca, IdCategoria, IdTalle, IdColor1, IdColor2, IdColor3, IdSexo, Imagen_principal,
+Imagen_2, Imagen_3, Precio, Precio_promo, Stock, Ancho, Largo , Estrella, New, Garage)
+values ()
+
+select Id,Nombre from Color
