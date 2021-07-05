@@ -16,45 +16,7 @@ namespace TPC_Laurentino_Srebernich
             Cargar_desplegables();
         }
 
-        protected void Agregar_nuevo(object sender, EventArgs e)
-        {
-            Consulta Agregar = new Consulta();
-            Producto nuevo = new Producto();
-            try
-            {
-                nuevo.Nombre = textNombre.Text;
-                nuevo.Ancho = Convert.ToInt32(TextAncho.Text);
-                nuevo.Categorias.ID = Convert.ToInt32(D_Categoria.SelectedItem.Value);
-                nuevo.Color.ID = Convert.ToInt32(D_Color1.SelectedItem.Value);
-                nuevo.Color_2.ID = Convert.ToInt32(D_Color2.SelectedItem.Value);
-                nuevo.Descripcion = TextDescripcion.Text;
-                nuevo.Estrella = CheckBox1.Checked;
-                nuevo.Garage = CheckBox3.Checked;
-                nuevo.Imagen_2 = Textimagen2.Text;
-                nuevo.Imagen_3 = TextImagen3.Text;
-                nuevo.Imagen_principal = TextImagenprincipal.Text;
-                nuevo.Largo = Convert.ToInt32(TextLargo.Text);
-                nuevo.Marcas.ID = Convert.ToInt32(D_Marcas.SelectedItem.Value);
-                nuevo.Nuevo = CheckBox2.Checked;
-                nuevo.Precio = Convert.ToDecimal(TextPrecio.Text);
-                nuevo.Precio_prom = Convert.ToInt32(Textpreciopromo.Text);
-                nuevo.Sexo.ID = Convert.ToInt16(D_Sexo.SelectedItem.Value);
-                nuevo.Stock = Convert.ToInt32(TextStock.Text);
-                nuevo.Talle.ID = Convert.ToInt32(D_Talle.SelectedItem.Value);
-
-                Agregar.Agregar(nuevo);
-               
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-           
-            
-
-        }
+     
 
         private void Cargar_desplegables()
         {
@@ -63,8 +25,9 @@ namespace TPC_Laurentino_Srebernich
             TalleNegocio Talles = new TalleNegocio();
             ColorNegocio Colores = new ColorNegocio();
             SexoNegocio Sexos = new SexoNegocio();
-
             
+
+
             try
             {
                 if (!IsPostBack)
@@ -98,6 +61,7 @@ namespace TPC_Laurentino_Srebernich
                     D_Sexo.DataTextField = "Nombre";
                     D_Sexo.DataValueField = "Id";
                     D_Sexo.DataBind();
+                    
                 }
             }
             catch (Exception ex )
@@ -105,6 +69,44 @@ namespace TPC_Laurentino_Srebernich
 
                 throw ex;
             }
+        }
+
+        protected void Button_Agregar_Click(object sender, EventArgs e)
+        {
+            Consulta Agregar = new Consulta();
+            Producto nuevo = new Producto();
+            try
+            {
+                nuevo.Nombre = Nombre.ToString();
+                nuevo.Ancho = Convert.ToInt32(Ancho.ToString());
+                nuevo.Categorias.ID = Convert.ToInt32(D_Categoria.SelectedItem.Value);
+                nuevo.Color.ID = Convert.ToInt32(D_Color1.SelectedItem.Value);
+                nuevo.Color_2.ID = Convert.ToInt32(D_Color2.SelectedItem.Value);
+                nuevo.Descripcion = Descripcion.ToString();
+                nuevo.Estrella = CheckBox1.Checked;
+                nuevo.Garage = CheckBox3.Checked;
+                nuevo.Imagen_2 = Imagen_2.ToString();
+                nuevo.Imagen_3 = Imagen_3.ToString();
+                nuevo.Imagen_principal = Imagen_Principal.ToString();
+                nuevo.Largo = Convert.ToInt32(Largo.ToString());
+                nuevo.Marcas.ID = Convert.ToInt32(D_Marcas.SelectedItem.Value);
+                nuevo.Nuevo = CheckBox2.Checked;
+                nuevo.Precio = Convert.ToDecimal(Precio.ToString());
+                nuevo.Precio_prom = Convert.ToInt32(Precio_prom.ToString());
+                nuevo.Sexo.ID = Convert.ToInt16(D_Sexo.SelectedItem.Value);
+                nuevo.Stock = Convert.ToInt32(Stock.ToString());
+                nuevo.Talle.ID = Convert.ToInt32(D_Talle.SelectedItem.Value);
+
+                Agregar.Agregar(nuevo);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
     }
 }

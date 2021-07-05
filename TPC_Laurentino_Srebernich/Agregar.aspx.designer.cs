@@ -15,94 +15,94 @@ namespace TPC_Laurentino_Srebernich
     {
 
         /// <summary>
-        /// Control textNombre.
+        /// Control Nombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textNombre;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Nombre;
 
         /// <summary>
-        /// Control TextDescripcion.
+        /// Control Descripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextDescripcion;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Descripcion;
 
         /// <summary>
-        /// Control TextImagenprincipal.
+        /// Control Imagen_Principal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextImagenprincipal;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Imagen_Principal;
 
         /// <summary>
-        /// Control Textimagen2.
+        /// Control Imagen_2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textimagen2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Imagen_2;
 
         /// <summary>
-        /// Control TextImagen3.
+        /// Control Imagen_3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextImagen3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Imagen_3;
 
         /// <summary>
-        /// Control TextStock.
+        /// Control Stock.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextStock;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Stock;
 
         /// <summary>
-        /// Control TextPrecio.
+        /// Control Precio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextPrecio;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Precio;
 
         /// <summary>
-        /// Control Textpreciopromo.
+        /// Control Precio_prom.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textpreciopromo;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Precio_prom;
 
         /// <summary>
-        /// Control TextAncho.
+        /// Control Ancho.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextAncho;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Ancho;
 
         /// <summary>
-        /// Control TextLargo.
+        /// Control Largo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextLargo;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Largo;
 
         /// <summary>
         /// Control CheckBox1.
@@ -186,12 +186,12 @@ namespace TPC_Laurentino_Srebernich
         protected global::System.Web.UI.WebControls.DropDownList D_Sexo;
 
         /// <summary>
-        /// Control B_agregar.
+        /// Control Button_Agregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button B_agregar;
+        protected global::System.Web.UI.WebControls.Button Button_Agregar;
     }
 }
