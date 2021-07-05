@@ -68,12 +68,17 @@
 
                         <li><a class="nav-link" href="/Carrito">Mi Carrito<i class="fas fa-shopping-cart"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Editar">Editar</a>
+
+         
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Editar productos</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: large">
+                                <li><a class="dropdown-item" href="/Agregar">Agregar</a></li>
+                                <li><a class="dropdown-item" href="/Modificar">Modificar</a></li>
+                                <li><a class="dropdown-item" href="/Eliminar">Eliminar</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Agregar">Agregar</a>
-                        </li>
+
                     </ul>
 
                     <form class="d-flex">
@@ -83,14 +88,14 @@
                 </div>
             </div>
         </nav>
-
+        <br /><br />
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             </div>
-
-            <footer>
+        <br /> <br /><br />
+            <footer style="text-align:center">
                          
                Medios de pago: efectivo <i class="fas fa-money-bill-wave"></i> Mercado Pago <i class="far fa-credit-card"></i> Transferencia bancaria <i class="fas fa-university"></i>
                
