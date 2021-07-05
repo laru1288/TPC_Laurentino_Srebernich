@@ -20,6 +20,12 @@ namespace TPC_Laurentino_Srebernich
         {
             Consulta Agregar = new Consulta();
             Producto nuevo = new Producto();
+            nuevo.Categorias = new Categoria();
+            nuevo.Color = new Color();
+            nuevo.Color_2 = new Color();
+            nuevo.Marcas = new Marca();
+            nuevo.Sexo = new Sexo();
+            nuevo.Talle = new Talle();
             try
             {
                 nuevo.Nombre = textNombre.Text;

@@ -67,7 +67,7 @@ namespace Negocio
         public void Agregar(Producto nuevo){
             AccesoDatos datos = new AccesoDatos();
             try {
-                string valores = "values ('" + nuevo.Nombre + "' , '"+ nuevo.Descripcion +"' , '"+ nuevo.Marcas + "' , '" + nuevo.Categorias+ "' , '"+ nuevo.Talle +"' , '" + nuevo.Color+"' , '"+ nuevo.Color_2 +"', '"+nuevo.Sexo+"', '"+nuevo.Imagen_principal+"' , '"+nuevo.Imagen_2+"' , '"+nuevo.Imagen_3+"' , '"+nuevo.Precio+"', '"+nuevo.Precio_prom+"', '"+nuevo.Stock+"' , '"+nuevo.Ancho+"', '"+nuevo.Largo+"', '"+nuevo.Estrella+"', '"+nuevo.Nuevo+"', '"+nuevo.Garage+"')"  ;
+                string valores = "values ('" + nuevo.Nombre + "' , '"+ nuevo.Descripcion +"' , '"+ nuevo.Marcas.ID + "' , '" + nuevo.Categorias.ID+ "' , '"+ nuevo.Talle.ID +"' , '" + nuevo.Color.ID+"' , '"+ nuevo.Color_2.ID +"', '"+nuevo.Sexo.ID+"', '"+nuevo.Imagen_principal+"' , '"+nuevo.Imagen_2+"' , '"+nuevo.Imagen_3+"' , '"+nuevo.Precio+"', '"+nuevo.Precio_prom+"', '"+nuevo.Stock+"' , '"+nuevo.Ancho+"', '"+nuevo.Largo+"', '"+nuevo.Estrella+"', '"+nuevo.Nuevo+"', '"+nuevo.Garage+"')"  ;
                 datos.SetearConsulta("insert into Producto (Nombre, Descripcion, IdMarca, IdCategoria, IdTalle, IdColor1, IdColor2, IdSexo, Imagen_principal,Imagen_2, Imagen_3, Precio, Precio_promo, Stock, Ancho, Largo, Estrella, New, Garage)" + valores);
                 datos.EjectutarAccion();
             }

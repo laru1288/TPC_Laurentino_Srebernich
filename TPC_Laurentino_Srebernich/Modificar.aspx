@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Modificar.aspx.cs" Inherits="TPC_Laurentino_Srebernich.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+  <form runat="server">
     <h1>Productos</h1> 
     <table class="table table-success table-striped"> 
         <tr> 
@@ -28,7 +29,13 @@
                 <tr> 
                 <td contenteditable='true'><p> <%= item.Nombre %></p></td> 
                 <td contenteditable='true'><p> <%= item.Descripcion %></p></td>
-                <td contenteditable='true'><p> <%= item.Marcas.Nombre %></p></td>
+                <td contenteditable='true'>
+                      
+               <asp:DropDownList ID="Desplegable_Marcas" class="form-select"  runat="server"  datatextfield="Id"
+                       datavaluefield= "Nombre" > </asp:DropDownList>
+
+                </td>
+
                 <td contenteditable='true'><p> <%= item.Categorias.Nombre %></p></td>
                 <td contenteditable='true'><p> <%= item.Talle %></p></td>
                 <td contenteditable='true'><p> <%= item.Color.Nombre %></p></td>
@@ -49,4 +56,5 @@
 
        <%  } %>
     </table>
+      </form>
 </asp:Content>
