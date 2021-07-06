@@ -2,8 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
   <form runat="server">
     <h1>Productos</h1> 
-    <table class="table table-success table-striped"> 
+    <table class="table table-success table-striped" id="tabla_modificar" style="width:100%" > 
+       <thead> 
         <tr> 
+                <td><p>Accion</p></td>
                 <td><p>Nombre</p></td> 
                 <td><p>Descripcion</p></td>
                 <td><p>Marca</p></td>
@@ -24,20 +26,19 @@
                 <td><p>Nuevo</p></td>
                 <td><p>Garage</p></td>
                 </tr>
+        </thead>
+        <tbody> 
      <%foreach ( Dominio.Producto item in lista)
           {%>
                 <tr> 
+                <td> <a href="Editar.aspx?id=<%= item.ID %>&evento=editar" Onclick="modificar" > <i class="far fa-edit"></i></a>
+                    <a href="Eliminar.aspx?id=<%= item.ID %>&evento=eliminar" Onclick="modificar" > <i class="fas fa-trash-alt"></i></a>
+                </td>
                 <td contenteditable='true'><p> <%= item.Nombre %></p></td> 
                 <td contenteditable='true'><p> <%= item.Descripcion %></p></td>
-                <td contenteditable='true'>
-                      
-               <asp:DropDownList ID="Desplegable_Marcas" class="form-select"  runat="server"  datatextfield="Id"
-                       datavaluefield= "Nombre" > </asp:DropDownList>
-
-                </td>
-
+                <td contenteditable='true'> <p><%=item.Marcas.Nombre %></p></td>
                 <td contenteditable='true'><p> <%= item.Categorias.Nombre %></p></td>
-                <td contenteditable='true'><p> <%= item.Talle %></p></td>
+                <td contenteditable='true'><p> <%= item.Talle.Nombre %></p></td>
                 <td contenteditable='true'><p> <%= item.Color.Nombre %></p></td>
                 <td contenteditable='true'><p> <%= item.Color_2.Nombre %></p></td>
                 <td contenteditable='true'><p> <%= item.Sexo.Nombre %></p></td>
@@ -55,6 +56,10 @@
                 </tr>
 
        <%  } %>
+            </tbody>
     </table>
+
+
+      
       </form>
 </asp:Content>

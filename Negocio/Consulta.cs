@@ -80,6 +80,24 @@ namespace Negocio
             }
         }
 
+        public void Eliminar (int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try {
+                datos.SetearConsulta("delete from Producto where ID = " + id);
+                datos.EjecutarLectura();
+            }
+            catch (Exception) {
+
+                throw;
+            }
+            finally {
+                datos.cerrarConexion();
+            }
+
+
+        }
+
 
 
     }

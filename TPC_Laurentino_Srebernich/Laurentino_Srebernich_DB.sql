@@ -114,3 +114,5 @@ Imagen_2, Imagen_3, Precio, Precio_promo, Stock, Ancho, Largo , Estrella, New, G
 values ()
 
 select Id,Nombre from Color
+
+delete from Producto where ID = 2

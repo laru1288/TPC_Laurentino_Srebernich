@@ -1,15 +1,14 @@
 ﻿* {
-    font-size: large;
-    
+   
 }
 
 h1{
-    font-family: Edo;
+   
 }
 
 nav {
     background-color: #7DB6AD;
-    font-size: large;
+   
     
 }
 
@@ -18,7 +17,7 @@ nav {
 }
 
     .dropdown-submenu > .dropdown-menu {
-        font-size: large;
+        
         top: 0;
         left: 100%;
         margin-top: -6px;

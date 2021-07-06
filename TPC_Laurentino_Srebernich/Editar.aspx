@@ -107,7 +107,7 @@
     </div>
      
 
-    <asp:button type="submit" text="Agregar" ID="B_agregar" class="btn btn-primary" runat="server" Onclick="Agregar_nuevo" />
+    <asp:button type="submit" text="Agregar" ID="B_agregar" class="btn btn-primary" runat="server" />
       
 
 </fieldset>
