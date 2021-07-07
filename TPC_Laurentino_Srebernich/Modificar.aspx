@@ -5,7 +5,8 @@
     <table class="table table-success table-striped" id="tabla_modificar" style="width:100%" > 
        <thead> 
         <tr> 
-                <td><p>Accion</p></td>
+                <td><p>Editar</p></td>
+                <td><p>Eliminar</p></td>
                 <td><p>Nombre</p></td> 
                 <td><p>Descripcion</p></td>
                 <td><p>Marca</p></td>
@@ -31,28 +32,27 @@
      <%foreach ( Dominio.Producto item in lista)
           {%>
                 <tr> 
-                <td> <a href="Editar.aspx?id=<%= item.ID %>&evento=editar" Onclick="modificar" > <i class="far fa-edit"></i></a>
-                    <a href="Eliminar.aspx?id=<%= item.ID %>&evento=eliminar" Onclick="modificar" > <i class="fas fa-trash-alt"></i></a>
-                </td>
-                <td contenteditable='true'><p> <%= item.Nombre %></p></td> 
-                <td contenteditable='true'><p> <%= item.Descripcion %></p></td>
-                <td contenteditable='true'> <p><%=item.Marcas.Nombre %></p></td>
-                <td contenteditable='true'><p> <%= item.Categorias.Nombre %></p></td>
-                <td contenteditable='true'><p> <%= item.Talle.Nombre %></p></td>
-                <td contenteditable='true'><p> <%= item.Color.Nombre %></p></td>
-                <td contenteditable='true'><p> <%= item.Color_2.Nombre %></p></td>
-                <td contenteditable='true'><p> <%= item.Sexo.Nombre %></p></td>
-                <td contenteditable='true'><p> <%= item.Imagen_principal %></p></td>
-                <td contenteditable='true'><p> <%= item.Imagen_2 %></p></td>
-                <td contenteditable='true'><p> <%= item.Imagen_3 %></p></td>
-                <td contenteditable='true'><p> <%= item.Precio.ToString("0.00") %></p></td> 
-                <td contenteditable='true'><p> <%= item.Precio_prom.ToString("0.00") %></p></td>
-                <td contenteditable='true'><p> <%= item.Stock %></p></td>
-                <td contenteditable='true'><p> <%= item.Ancho %></p></td>
-                <td contenteditable='true'><p> <%= item.Largo %></p></td>
-                <td contenteditable='true'><p> <%= item.Estrella %></p></td>
-                <td contenteditable='true'><p> <%= item.Nuevo %></p></td>
-                <td contenteditable='true'><p> <%= item.Garage %></p></td>
+                <td><a href="Editar.aspx?id=<%= item.ID %>&evento=editar" Onclick="modificar" > <i class="far fa-edit"></i></a></td>
+                <td><a href="Eliminar.aspx?id=<%= item.ID %>&evento=eliminar" Onclick="modificar" > <i class="fas fa-trash-alt"></i></a></td>
+                <td><p> <%= item.Nombre %></p></td> 
+                <td><p> <%= item.Descripcion %></p></td>
+                <td><p><%=item.Marcas.Nombre %></p></td>
+                <td><p> <%= item.Categorias.Nombre %></p></td>
+                <td><p> <%= item.Talle.Nombre %></p></td>
+                <td><p> <%= item.Color.Nombre %></p></td>
+                <td><p> <%= item.Color_2.Nombre %></p></td>
+                <td><p> <%= item.Sexo.Nombre %></p></td>
+                <td><p> <%= item.Imagen_principal %></p></td>
+                <td><p> <%= item.Imagen_2 %></p></td>
+                <td><p> <%= item.Imagen_3 %></p></td>
+                <td><p> <%= item.Precio.ToString("0.00") %></p></td> 
+                <td><p> <%= item.Precio_prom.ToString("0.00") %></p></td>
+                <td><p> <%= item.Stock %></p></td>
+                <td><p> <%= item.Ancho %></p></td>
+                <td><p> <%= item.Largo %></p></td>
+                <td><p> <%= item.Estrella %></p></td>
+                <td><p> <%= item.Nuevo %></p></td>
+                <td><p> <%= item.Garage %></p></td>
                 </tr>
 
        <%  } %>

@@ -75,7 +75,6 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: large">
                                 <li><a class="dropdown-item" href="/Agregar">Agregar</a></li>
                                 <li><a class="dropdown-item" href="/Modificar">Modificar</a></li>
-                                <li><a class="dropdown-item" href="/Eliminar">Eliminar</a></li>
                             </ul>
                         </li>
 

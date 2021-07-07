@@ -50,6 +50,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -118,6 +119,7 @@
     <Content Include="Detalle.aspx" />
     <Content Include="Editar.aspx" />
     <Content Include="Eliminar.aspx" />
+    <Content Include="Exito.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GarageSale.aspx" />
@@ -229,6 +231,13 @@
     </Compile>
     <Compile Include="Eliminar.aspx.designer.cs">
       <DependentUpon>Eliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exito.aspx.cs">
+      <DependentUpon>Exito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exito.aspx.designer.cs">
+      <DependentUpon>Exito.aspx</DependentUpon>
     </Compile>
     <Compile Include="GarageSale.aspx.cs">
       <DependentUpon>GarageSale.aspx</DependentUpon>

@@ -12,7 +12,7 @@ namespace TPC_Laurentino_Srebernich
     public partial class Eliminar : System.Web.UI.Page
     {
         List<Producto> listaproductos = new List<Producto>();
-        Producto Aeliminar = new Producto();
+        public Producto Aeliminar = new Producto();
         int id;
 
         protected void Page_Load(object sender, EventArgs e){
@@ -29,21 +29,13 @@ namespace TPC_Laurentino_Srebernich
 
         protected void cargar_datos(Producto Aeliminar){
             textNombre.Text = Aeliminar.Nombre;
-            TextAncho.Text = Aeliminar.Ancho.ToString();
             TextDescripcion.Text = Aeliminar.Descripcion;
-            Textimagen2.Text = Aeliminar.Imagen_2;
-            TextImagen3.Text = Aeliminar.Imagen_3;
-            TextImagenprincipal.Text = Aeliminar.Imagen_principal;
-            TextLargo.Text = Aeliminar.Largo.ToString();
-            TextPrecio.Text = Aeliminar.Precio.ToString("0.00");
-            Textpreciopromo.Text = Aeliminar.Precio_prom.ToString("0.00");
-            TextStock.Text = Aeliminar.Stock.ToString();                
-
         }
 
         protected void B_Eliminar_Click(object sender, EventArgs e) {
             Consulta Eliminar = new Consulta();
             Eliminar.Eliminar(id);
+            Response.Redirect("Exito.aspx");
         }
     }
 }

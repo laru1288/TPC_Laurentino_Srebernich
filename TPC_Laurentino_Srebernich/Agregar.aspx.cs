@@ -49,7 +49,7 @@ namespace TPC_Laurentino_Srebernich
                 nuevo.Talle.ID = Convert.ToInt32(D_Talle.SelectedItem.Value);
 
                 Agregar.Agregar(nuevo);
-               
+                Response.Redirect("Exito.aspx");
 
             }
             catch (Exception ex)

@@ -147,7 +147,8 @@ namespace TPC_Laurentino_Srebernich
                     nuevo.ID = Aeditar.ID;
 
                     Modificar.Modificar(nuevo);
-                
+                    Response.Redirect("Exito.aspx");
+
             }
             catch (Exception ex)
             {

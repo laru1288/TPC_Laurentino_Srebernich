@@ -11,8 +11,15 @@
                       <img src="<% = item.Imagen_principal %>"" class="card-img-top" alt="Imagen no disponible" onerror="this.src='./ind.jpeg';"/>
                       <div class ="card-body">
                           <h5 class ="card-title"> <%= item.Nombre %></h5>
-                          <p class="card-text" ><del><%= item.Precio.ToString("0.00") %></del></p>
-                          <p class="card-text"><%= item.Precio_prom.ToString("0.00") %></p>
+                          <%if (item.Precio_prom > 0)
+                              { %>
+                                <p class="card-text"><del><%= item.Precio.ToString("0.00") %></del></p>
+                                <p class="card-text"><%= item.Precio_prom.ToString("0.00") %></p>
+                          <%}
+                            else
+                            {%>
+                                <p class="card-text"><%= item.Precio.ToString("0.00") %></p>
+                          <%} %>
                           <a href="Detalle.aspx?id=<%=item.ID %>" class="btn btn-primary">Ver detalle</a>
                       </div>
                   </div>
