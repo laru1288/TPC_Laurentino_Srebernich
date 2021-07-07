@@ -98,6 +98,26 @@ namespace Negocio
 
         }
 
+        public void Modificar (Producto nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("update  Producto  set Nombre = '" +nuevo.Nombre+ "' , Descripcion = '" +nuevo.Descripcion+ "', IdMarca = '" +nuevo.Marcas.ID+ "', IdCategoria= '" +nuevo.Categorias.ID+ "', IdTalle= '" +nuevo.Talle.ID+ "', IdColor1= '" + nuevo.Color.ID + "', IdColor2= '" + nuevo.Color_2.ID + "', IdSexo= '" + nuevo.Sexo.ID + "', Imagen_principal= '" + nuevo.Imagen_principal + "',Imagen_2= '" + nuevo.Imagen_2 + "', Imagen_3= '" + nuevo.Imagen_3 + "', Precio= '" + nuevo.Precio + "', Precio_promo= '" + nuevo.Precio_prom + "', Stock= '" + nuevo.Stock + "', Ancho= '" + nuevo.Ancho + "', Largo= '" + nuevo.Largo + "', Estrella= '" + nuevo.Estrella + "', New= '" + nuevo.Nuevo + "', Garage= '" + nuevo.Garage + "' where ID = '" + nuevo.ID+ "' ");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception EX )
+            {
+
+                throw EX;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
 
 
     }

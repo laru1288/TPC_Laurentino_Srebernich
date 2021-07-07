@@ -74,12 +74,7 @@ insert into Producto values ('lalalalalala', 'lalalalala',1,2,3,4,4,4,2,'\Imagen
 
 
 
-select * from Categoria
-select * from Talle
-select * from Color
-select * from Sexo
-select * from Producto
-select * from Marca
+
 
 insert into Sexo values (1, 'Mujer'), (2, 'Hombre')
 insert into Categoria values (1,'Remeras'), (2,'Buzos'), (3,'Pantalones'), (4,'Remeras termicas'), (5,'Ropa interior'), (6,'Camperas'),
@@ -116,3 +111,15 @@ values ()
 select Id,Nombre from Color
 
 delete from Producto where ID = 2
+
+select * from Categoria
+select * from Talle
+select * from Color
+select * from Sexo
+select * from Producto
+select * from Marca
+--marca =1 /adidas . categoria=2/uzo, talle=3/L, colo1=4/gris melagne, color2=4, sexo=2/homre
+--
+
+update  Producto  set Nombre='Regina'
+ where ID=11

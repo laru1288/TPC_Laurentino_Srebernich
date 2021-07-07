@@ -43,7 +43,7 @@ namespace TPC_Laurentino_Srebernich
                 nuevo.Marcas.ID = Convert.ToInt32(D_Marcas.SelectedItem.Value);
                 nuevo.Nuevo = CheckBox2.Checked;
                 nuevo.Precio = Convert.ToDecimal(TextPrecio.Text);
-                nuevo.Precio_prom = Convert.ToInt32(Textpreciopromo.Text);
+                nuevo.Precio_prom = Convert.ToDecimal(Textpreciopromo.Text);
                 nuevo.Sexo.ID = Convert.ToInt16(D_Sexo.SelectedItem.Value);
                 nuevo.Stock = Convert.ToInt32(TextStock.Text);
                 nuevo.Talle.ID = Convert.ToInt32(D_Talle.SelectedItem.Value);

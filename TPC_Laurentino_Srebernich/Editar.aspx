@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Editar.aspx.cs" Inherits="TPC_Laurentino_Srebernich.Editar" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <form runat="server">
+  <form runat="server">
     <br />
     <br />
     <br />
@@ -107,7 +107,7 @@
     </div>
      
 
-    <asp:button type="submit" text="Agregar" ID="B_agregar" class="btn btn-primary" runat="server" />
+    <asp:button type="submit" text="Modificar" ID="B_modificar" class="btn btn-primary" runat="server" OnClick="B_modificar_Click" />
       
 
 </fieldset>
