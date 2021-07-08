@@ -9,8 +9,6 @@ CREATE TABLE Talle(
 )
 go
 
-drop database Laurentino_Srebernich_DB
-
 create table Marca (
 	ID int primary key not null identity (1,1),
 	Nombre varchar(20) not null
@@ -23,19 +21,20 @@ create table Color(
 )
 go
 
-create table Categoria(
-	ID int primary key not null identity (1,1),
-	Nombre varchar(20) not null
-)
-go
-
-alter table Categoria add IDSub int FOREIGN KEY REFERENCES SubCategoria(ID)
 
 create table SubCategoria(
 	ID int primary key not null identity (1,1),
 	Nombre varchar(20) not null
 )
 go
+
+create table Categoria(
+	ID int primary key not null identity (1,1),
+	Nombre varchar(20) not null
+	IDSub int FOREIGN KEY REFERENCES SubCategoria(ID)
+)
+go
+
 
 create table Sexo (
 	ID int primary key not null identity (1,1),
@@ -140,3 +139,7 @@ update  Categoria  set IDSub= 3
  alter table Categoria modify ID = identity (1,1)
 
  select cat.Id, cat.Nombre, IDSub,sub.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub
+
+
+
+ drop database Laurentino_Srebernich_DB

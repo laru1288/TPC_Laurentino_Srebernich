@@ -159,7 +159,168 @@ namespace Negocio
 
         }
 
+        public void Agregar_Marca(Marca nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into Marca (Nombre) values ('" + nuevo.Nombre + "')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
+        }
+
+        public void Modificar_Marca(Marca nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("update Marca set Nombre = '" + nuevo.Nombre + "' where ID ='" + nuevo.ID + "' ");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Agregar_Color(Color nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into Color (Nombre) values ('" + nuevo.Nombre + "')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Modificar_Color(Color nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("update Color set Nombre = '" + nuevo.Nombre + "' where ID ='" + nuevo.ID + "' ");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Agregar_Sexo(Sexo nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into Sexo (Nombre) values ('" + nuevo.Nombre + "')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Modificar_Sexo(Sexo nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("update Sexo set Nombre = '" + nuevo.Nombre + "' where ID ='" + nuevo.ID + "' ");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Agregar_Talle(Talle nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into Talle (Nombre) values ('" + nuevo.Nombre + "')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Modificar_Talle(Talle nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("update Talle set Nombre = '" + nuevo.Nombre + "' where ID ='" + nuevo.ID + "' ");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
     }
 }

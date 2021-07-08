@@ -11,34 +11,25 @@ namespace TPC_Laurentino_Srebernich
 {
 
 
-    public partial class EditarCategoria
+    public partial class Agregar_Talle
     {
 
         /// <summary>
-        /// Control D_Nombre.
+        /// Control textNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList D_Nombre;
+        protected global::System.Web.UI.WebControls.TextBox textNombre;
 
         /// <summary>
-        /// Control D_subcategoria.
+        /// Control B_agregar_talle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList D_subcategoria;
-
-        /// <summary>
-        /// Control B_modificar_categoria.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button B_modificar_categoria;
+        protected global::System.Web.UI.WebControls.Button B_agregar_talle;
     }
 }

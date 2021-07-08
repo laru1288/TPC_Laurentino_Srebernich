@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarCategoria.aspx.cs" Inherits="TPC_Laurentino_Srebernich.EditarMarca" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarCategoria.aspx.cs" Inherits="TPC_Laurentino_Srebernich.EditarCategoria" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <form runat="server">
     <br />
@@ -17,8 +17,7 @@
     </div>
          <div class="mb-3">
          <asp:label for="Nombre" class="form-label" runat="server">Subcategoria </asp:label>
-            <asp:DropDownList ID="D_subcategoria" runat="server" class="form-select" datatextfield="Id"
-        datavaluefield="Nombre" >
+            <asp:DropDownList ID="D_subcategoria" runat="server" class="form-select" datatextfield="Id" datavaluefield="Nombre" >
            
         </asp:DropDownList>
     </div>  

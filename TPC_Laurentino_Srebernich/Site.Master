@@ -75,7 +75,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: large">
                                 <li><a class="dropdown-item" href="/Agregar">Agregar productos</a></li>
                                 <li><a class="dropdown-item" href="/Modificar">Modificar productos</a></li>
-                                 <li><a class="dropdown-item" href="/Editables">Agregar y modificar</a></li>
+                                 <li><a class="dropdown-item" href="/Editables">Agregar y modificar otros</a></li>
                             </ul>
                         </li>
 

@@ -24,21 +24,12 @@ namespace TPC_Laurentino_Srebernich
         protected global::System.Web.UI.WebControls.TextBox textNombre;
 
         /// <summary>
-        /// Control D_Subcategorias.
+        /// Control B_agregar_marca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList D_Subcategorias;
-
-        /// <summary>
-        /// Control B_agregar_categoria.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button B_agregar_categoria;
+        protected global::System.Web.UI.WebControls.Button B_agregar_marca;
     }
 }

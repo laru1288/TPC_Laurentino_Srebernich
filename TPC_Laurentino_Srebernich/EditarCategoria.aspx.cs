@@ -9,7 +9,7 @@ using Negocio;
 
 namespace TPC_Laurentino_Srebernich
 {
-    public partial class EditarMarca : System.Web.UI.Page
+    public partial class EditarCategoria : System.Web.UI.Page
     {
         List<Categoria> listacategorias = new List<Categoria>();
         Categoria Aeditar = new Categoria();

@@ -107,7 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Agregar.aspx" />
+    <Content Include="Agregar_Categoria.aspx" />
+    <Content Include="Agregar_Color.aspx" />
     <Content Include="Agregar_Marca.aspx" />
+    <Content Include="Agregar_Sexo.aspx" />
+    <Content Include="Agregar_Talle.aspx" />
     <Content Include="Carrito.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Contacto.aspx" />
@@ -121,8 +125,13 @@
     <Content Include="Editables.aspx" />
     <Content Include="Editar.aspx" />
     <Content Include="EditarCategoria.aspx" />
+    <Content Include="EditarColor.aspx" />
+    <Content Include="EditarMarca.aspx" />
+    <Content Include="EditarSexo.aspx" />
+    <Content Include="EditarTalle.aspx" />
     <Content Include="Eliminar.aspx" />
     <Content Include="Exito.aspx" />
+    <Content Include="Exito2.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GarageSale.aspx" />
@@ -184,12 +193,40 @@
     <Compile Include="Agregar.aspx.designer.cs">
       <DependentUpon>Agregar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Agregar_Categoria.aspx.cs">
+      <DependentUpon>Agregar_Categoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agregar_Categoria.aspx.designer.cs">
+      <DependentUpon>Agregar_Categoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_Color.aspx.cs">
+      <DependentUpon>Agregar_Color.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agregar_Color.aspx.designer.cs">
+      <DependentUpon>Agregar_Color.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Agregar_Marca.aspx.cs">
       <DependentUpon>Agregar_Marca.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Agregar_Marca.aspx.designer.cs">
       <DependentUpon>Agregar_Marca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_Sexo.aspx.cs">
+      <DependentUpon>Agregar_Sexo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agregar_Sexo.aspx.designer.cs">
+      <DependentUpon>Agregar_Sexo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_Talle.aspx.cs">
+      <DependentUpon>Agregar_Talle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agregar_Talle.aspx.designer.cs">
+      <DependentUpon>Agregar_Talle.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -249,6 +286,34 @@
     <Compile Include="EditarCategoria.aspx.designer.cs">
       <DependentUpon>EditarCategoria.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditarColor.aspx.cs">
+      <DependentUpon>EditarColor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarColor.aspx.designer.cs">
+      <DependentUpon>EditarColor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarMarca.aspx.cs">
+      <DependentUpon>EditarMarca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarMarca.aspx.designer.cs">
+      <DependentUpon>EditarMarca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarSexo.aspx.cs">
+      <DependentUpon>EditarSexo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarSexo.aspx.designer.cs">
+      <DependentUpon>EditarSexo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarTalle.aspx.cs">
+      <DependentUpon>EditarTalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarTalle.aspx.designer.cs">
+      <DependentUpon>EditarTalle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Eliminar.aspx.cs">
       <DependentUpon>Eliminar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -262,6 +327,13 @@
     </Compile>
     <Compile Include="Exito.aspx.designer.cs">
       <DependentUpon>Exito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exito2.aspx.cs">
+      <DependentUpon>Exito2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Exito2.aspx.designer.cs">
+      <DependentUpon>Exito2.aspx</DependentUpon>
     </Compile>
     <Compile Include="GarageSale.aspx.cs">
       <DependentUpon>GarageSale.aspx</DependentUpon>
