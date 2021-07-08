@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Agregar.aspx" />
+    <Content Include="Agregar_Marca.aspx" />
     <Content Include="Carrito.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Contacto.aspx" />
@@ -117,7 +118,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Detalle.aspx" />
+    <Content Include="Editables.aspx" />
     <Content Include="Editar.aspx" />
+    <Content Include="EditarCategoria.aspx" />
     <Content Include="Eliminar.aspx" />
     <Content Include="Exito.aspx" />
     <Content Include="favicon.ico" />
@@ -181,6 +184,13 @@
     <Compile Include="Agregar.aspx.designer.cs">
       <DependentUpon>Agregar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Agregar_Marca.aspx.cs">
+      <DependentUpon>Agregar_Marca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Agregar_Marca.aspx.designer.cs">
+      <DependentUpon>Agregar_Marca.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Carrito.aspx.cs">
@@ -218,12 +228,26 @@
     <Compile Include="Detalle.aspx.designer.cs">
       <DependentUpon>Detalle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Editables.aspx.cs">
+      <DependentUpon>Editables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Editables.aspx.designer.cs">
+      <DependentUpon>Editables.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Editar.aspx.cs">
       <DependentUpon>Editar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Editar.aspx.designer.cs">
       <DependentUpon>Editar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCategoria.aspx.cs">
+      <DependentUpon>EditarCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarCategoria.aspx.designer.cs">
+      <DependentUpon>EditarCategoria.aspx</DependentUpon>
     </Compile>
     <Compile Include="Eliminar.aspx.cs">
       <DependentUpon>Eliminar.aspx</DependentUpon>

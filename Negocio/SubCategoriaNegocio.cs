@@ -7,21 +7,21 @@ using Dominio;
 
 namespace Negocio
 {
-   public class CategoriaNegocio {
-        public List<Categoria> listar()
+    public class SubCategoriaNegocio{
+        public List<Clasificacion> listar()
         {
 
-            List<Categoria> lista = new List<Categoria>();
+            List<Clasificacion> lista = new List<Clasificacion>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.SetearConsulta(" select cat.Id, cat.Nombre, IDSub,sub.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub");
+                datos.SetearConsulta("select Id,Nombre from SubCategoria");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
                 {
-                    lista.Add(new Categoria((int)datos.Lector[0], (string)datos.Lector[1], (int)datos.Lector[2], (string)datos.Lector[3]));
+                    lista.Add(new Clasificacion((int)datos.Lector["Id"], (string)datos.Lector["Nombre"]));
                 }
                 return lista;
             }

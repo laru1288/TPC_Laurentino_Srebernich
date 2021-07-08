@@ -98,13 +98,14 @@
            
         </asp:DropDownList>
     </div>
-       <div class="mb-3">
+   <div class="mb-3">
          <asp:label for="Nombre" class="form-label" runat="server">Sexo </asp:label>
             <asp:DropDownList ID="D_Sexo" runat="server" class="form-select"  datatextfield="Id"
         datavaluefield="Nombre" >
             
         </asp:DropDownList>
     </div>
+ 
      
 
     <asp:button type="submit" text="Agregar" ID="B_agregar" class="btn btn-primary" runat="server" Onclick="Agregar_nuevo" />

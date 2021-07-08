@@ -71,10 +71,11 @@
 
          
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Editar productos</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Editar </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: large">
-                                <li><a class="dropdown-item" href="/Agregar">Agregar</a></li>
-                                <li><a class="dropdown-item" href="/Modificar">Modificar</a></li>
+                                <li><a class="dropdown-item" href="/Agregar">Agregar productos</a></li>
+                                <li><a class="dropdown-item" href="/Modificar">Modificar productos</a></li>
+                                 <li><a class="dropdown-item" href="/Editables">Agregar y modificar</a></li>
                             </ul>
                         </li>
 
@@ -123,6 +124,24 @@
         });
 
     } );
+
+      </script>
+     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+      <script>
+
+          $(document).ready(function () {
+
+              $('#tabla_editables').DataTable({
+
+                  "language": {
+
+                      search: "Buscar"
+
+                  }
+
+              });
+
+          });
 
       </script>
 </body>

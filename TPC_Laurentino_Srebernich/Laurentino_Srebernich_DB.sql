@@ -4,7 +4,7 @@ use Laurentino_Srebernich_DB
 go
 
 CREATE TABLE Talle(
-	 ID smallint PRIMARY KEY not null,
+	 ID smallint PRIMARY KEY not null identity (1,1),
 	 Nombre varchar(20) not null
 )
 go
@@ -12,25 +12,33 @@ go
 drop database Laurentino_Srebernich_DB
 
 create table Marca (
-	ID int primary key not null,
+	ID int primary key not null identity (1,1),
 	Nombre varchar(20) not null
 )
 go
 
 create table Color(
-	ID int primary key not null,
+	ID int primary key not null identity (1,1),
 	Nombre varchar(20) not null
 )
 go
 
 create table Categoria(
-	ID int primary key not null,
+	ID int primary key not null identity (1,1),
+	Nombre varchar(20) not null
+)
+go
+
+alter table Categoria add IDSub int FOREIGN KEY REFERENCES SubCategoria(ID)
+
+create table SubCategoria(
+	ID int primary key not null identity (1,1),
 	Nombre varchar(20) not null
 )
 go
 
 create table Sexo (
-	ID int primary key not null,
+	ID int primary key not null identity (1,1),
 	Nombre varchar(20) not null
 )
 go
@@ -76,25 +84,27 @@ insert into Producto values ('lalalalalala', 'lalalalala',1,2,3,4,4,4,2,'\Imagen
 
 
 
-insert into Sexo values (1, 'Mujer'), (2, 'Hombre')
-insert into Categoria values (1,'Remeras'), (2,'Buzos'), (3,'Pantalones'), (4,'Remeras termicas'), (5,'Ropa interior'), (6,'Camperas'),
-(7,'Tops deportivos'), (8,'Shorts de banio'), (9,'Boxer'), (10,'Conjuntos')
-insert into Talle values (1, 's'), (2, 'm'), (3, 'l'), (4, 'xl')
-insert into Marca values (1, 'Adidas'), (2, 'Gap'), (3, 'Nike'), (4, 'Levis'), (5, 'Calvin Klein'), (6, 'Tomy Highfier')
-insert into Color values (1, 'Negro'), (2, 'rosa'), (3, 'gris claro'), (4, 'gris melagne'), (5, 'gris topo'), (6, 'fucsia')
+insert into Sexo values ( 'Mujer'), ( 'Hombre')
+insert into Categoria values ('Remeras',1), ('Buzos',1), ('Pantalones',2), ('Remeras termicas',1), ('Ropa interior',2), ('Camperas',1),
+('Tops deportivos',1), ('Shorts de banio',2), ('Boxer',3), ('Conjuntos',3)
+insert into Talle values ( 's'), ( 'm'), ( 'l'), ( 'xl')
+insert into Marca values ('Adidas'), ( 'Gap'), ( 'Nike'), ( 'Levis'), ( 'Calvin Klein'), ( 'Tomy Highfier')
+insert into Color values ( 'Negro'), ( 'rosa'), ( 'gris claro'), ( 'gris melagne'), ( 'gris topo'), ( 'fucsia')
+insert into Subcategoria VALUES ( 'PARTE DE ARRIBA'), ( 'PARTE DE ABAJO'), ( 'ROPA INTERIOR')
 
-Select distinct p.Nombre, p.Descripcion, p.Imagen_principal, p.Imagen_2, p.Imagen_3, p.Stock,
+Select p.Nombre, p.Descripcion, p.Imagen_principal, p.Imagen_2, p.Imagen_3, p.Stock,
 p.Precio, p.Precio_promo, p.Ancho,  p.Largo, p.Estrella, p.New, p.Garage,
-p.IdMarca, p.IdTalle, p.IdColor1, p.IdColor2,p.IdColor3, p.IdSexo, p.IdCategoria
+p.IdMarca, p.IdTalle, p.IdColor1, p.IdColor2,p.IdColor3, p.IdSexo, p.IdCategoria, cat.IDSub
 from Producto p left join Marca m  on p.IdMarca=m.ID
 left join Talle t on t.ID=p.IdTalle
 left join Color c on c.ID= p.ID
 left join Sexo s on s.ID= p.IdSexo
 left join Categoria  cat on cat.ID=p.IdCategoria
+left join SubCategoria sub on cat.IDSub=sub.ID
 
 Select p.Nombre, p.Descripcion, p.Imagen_principal, p.Imagen_2, p.Imagen_3, 
 p.Stock, p.Precio, p.Precio_promo, p.Ancho, p.Largo, p.Estrella, p.New, p.Garage, p.IdMarca,
-p.IdTalle, p.IdColor1, p.IdColor2, p.IdColor3, p.IdSexo, p.IdCategoria, p.ID from Producto as p
+p.IdTalle, p.IdColor1, p.IdColor2, p.IdColor3, p.IdSexo, p.IdCategoria, p.ID, cat.IDSub from Producto as p
 left join Marca as m  on p.IdMarca = m.ID left join Talle as t on t.ID = p.IdTalle left join
 Color as c on c.ID = p.IdColor1 or c.ID=p.IdColor2 or c.ID=p.IdColor3
 left join Sexo as s on s.ID = p.IdSexo left join Categoria as cat on cat.ID = p.IdCategoria
@@ -118,8 +128,15 @@ select * from Color
 select * from Sexo
 select * from Producto
 select * from Marca
+select * from SubCategoria
+
+update Categoria set Nombre ='Buzos', IDSub= 2 where ID =1 
 --marca =1 /adidas . categoria=2/uzo, talle=3/L, colo1=4/gris melagne, color2=4, sexo=2/homre
 --
+insert into Categoria (Nombre, IDSub) values ()
+update  Categoria  set IDSub= 3
+ where ID in (5,9,10)
 
-update  Producto  set Nombre='Regina'
- where ID=11
+ alter table Categoria modify ID = identity (1,1)
+
+ select cat.Id, cat.Nombre, IDSub,sub.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub

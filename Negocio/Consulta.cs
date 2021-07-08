@@ -15,7 +15,7 @@ namespace Negocio
             try
             {
                 datos.SetearConsulta(
-                    "Select p.Nombre, p.Descripcion, p.Imagen_principal, p.Imagen_2, p.Imagen_3, p.Stock, p.Precio, p.Precio_promo, p.Ancho, p.Largo, p.Estrella, p.New, p.Garage, p.IdMarca, p.IdTalle, p.IdColor1, p.IdColor2, p.IdSexo, p.IdCategoria, p.ID from Producto as p left join Marca as m  on p.IdMarca = m.ID left join Talle as t on t.ID = p.IdTalle left join Color as c on c.ID = p.IdColor1 or c.ID = p.IdColor2 or c.ID = p.IdColor3 left join Sexo as s on s.ID = p.IdSexo left join Categoria as cat on cat.ID = p.IdCategoria" );
+                    "Select p.Nombre, p.Descripcion, p.Imagen_principal, p.Imagen_2, p.Imagen_3, p.Stock, p.Precio, p.Precio_promo, p.Ancho, p.Largo, p.Estrella, p.New, p.Garage, p.IdMarca, p.IdTalle, p.IdColor1, p.IdColor2, p.IdSexo, p.IdCategoria, p.ID, cat.IDSub from Producto as p left join Marca as m  on p.IdMarca = m.ID left join Talle as t on t.ID = p.IdTalle left join Color as c on c.ID = p.IdColor1 or c.ID = p.IdColor2 or c.ID = p.IdColor3 left join Sexo as s on s.ID = p.IdSexo left join Categoria as cat on cat.ID = p.IdCategoria");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read()) {
@@ -47,7 +47,7 @@ namespace Negocio
                     aux.Sexo.ID = (Int32)datos.Lector[17];
                     aux.Categorias.ID = (Int32)datos.Lector[18];
                     aux.ID = (Int32)datos.Lector[19];
-
+                    aux.Categorias.IDSub = (Int32)datos.Lector[20];
                     lista.Add(aux);
 
                 }
@@ -116,6 +116,47 @@ namespace Negocio
             {
                 datos.cerrarConexion();
             }
+        }
+
+        public void Modificar_Categoria( Categoria nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("update Categoria set Nombre = '"+nuevo.Nombre+"', IDSub= '"+nuevo.IDSub+"' where ID ='"+nuevo.ID+"' ");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Agregar_Categoria( Categoria nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into Categoria (Nombre, IDSub) values ('"+nuevo.Nombre+"' , '"+nuevo.IDSub+"')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception ex )
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
         }
 
 

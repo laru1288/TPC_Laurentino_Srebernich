@@ -26,6 +26,7 @@ namespace TPC_Laurentino_Srebernich
             nuevo.Marcas = new Marca();
             nuevo.Sexo = new Sexo();
             nuevo.Talle = new Talle();
+            
             try
             {
                 nuevo.Nombre = textNombre.Text;
@@ -47,7 +48,7 @@ namespace TPC_Laurentino_Srebernich
                 nuevo.Sexo.ID = Convert.ToInt16(D_Sexo.SelectedItem.Value);
                 nuevo.Stock = Convert.ToInt32(TextStock.Text);
                 nuevo.Talle.ID = Convert.ToInt32(D_Talle.SelectedItem.Value);
-
+                
                 Agregar.Agregar(nuevo);
                 Response.Redirect("Exito.aspx");
 
@@ -69,7 +70,7 @@ namespace TPC_Laurentino_Srebernich
             TalleNegocio Talles = new TalleNegocio();
             ColorNegocio Colores = new ColorNegocio();
             SexoNegocio Sexos = new SexoNegocio();
-
+           
             
             try
             {
@@ -104,6 +105,9 @@ namespace TPC_Laurentino_Srebernich
                     D_Sexo.DataTextField = "Nombre";
                     D_Sexo.DataValueField = "Id";
                     D_Sexo.DataBind();
+                    
+
+
                 }
             }
             catch (Exception ex )

@@ -18,6 +18,7 @@ namespace TPC_Laurentino_Srebernich
         TalleNegocio Talles = new TalleNegocio();
         ColorNegocio Colores = new ColorNegocio();
         SexoNegocio Sexos = new SexoNegocio();
+       
         protected void Page_Load(object sender, EventArgs e)
 		{
 
@@ -57,6 +58,7 @@ namespace TPC_Laurentino_Srebernich
             D_Sexo.SelectedIndex = D_Sexo.Items.IndexOf(D_Sexo.Items.FindByValue(Aeditar.Sexo.ID.ToString()));
             TextStock.Text = Aeditar.Stock.ToString();
             D_Talle.SelectedIndex = D_Talle.Items.IndexOf(D_Talle.Items.FindByValue(Aeditar.Talle.ID.ToString()));
+           
             Cargar_desplegables();
 
         }
@@ -102,6 +104,7 @@ namespace TPC_Laurentino_Srebernich
                     D_Sexo.DataTextField = "Nombre";
                     D_Sexo.DataValueField = "Id";
                     D_Sexo.DataBind();
+                   
                 }
             }
             catch (Exception ex)
@@ -145,6 +148,7 @@ namespace TPC_Laurentino_Srebernich
                     nuevo.Stock = Convert.ToInt32(TextStock.Text);
                     nuevo.Talle.ID = Convert.ToInt32(D_Talle.SelectedItem.Value);
                     nuevo.ID = Aeditar.ID;
+                  
 
                     Modificar.Modificar(nuevo);
                     Response.Redirect("Exito.aspx");

@@ -16,3 +16,12 @@ E:\UTN\PROG 3\TP FINAL V3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.cs
 E:\UTN\PROG 3\TP FINAL V3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 E:\UTN\PROG 3\TP FINAL V3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.dll
 E:\UTN\PROG 3\TP FINAL V3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.pdb
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\bin\Debug\Negocio.dll
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\bin\Debug\Negocio.pdb
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\bin\Debug\Dominio.dll
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\bin\Debug\Dominio.pdb
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.dll
+E:\UTN\PROG 3\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.pdb

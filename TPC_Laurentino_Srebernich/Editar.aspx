@@ -105,6 +105,7 @@
             
         </asp:DropDownList>
     </div>
+    
      
 
     <asp:button type="submit" text="Modificar" ID="B_modificar" class="btn btn-primary" runat="server" OnClick="B_modificar_Click" />
