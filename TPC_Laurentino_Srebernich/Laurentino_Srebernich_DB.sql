@@ -106,12 +106,13 @@ p.Stock, p.Precio, p.Precio_promo, p.Ancho, p.Largo, p.Estrella, p.New, p.Garage
 p.IdTalle, p.IdColor1, p.IdColor2, p.IdColor3, p.IdSexo, p.IdCategoria, p.ID, cat.IDSub from Producto as p
 left join Marca as m  on p.IdMarca = m.ID left join Talle as t on t.ID = p.IdTalle left join
 Color as c on c.ID = p.IdColor1 or c.ID=p.IdColor2 or c.ID=p.IdColor3
-left join Sexo as s on s.ID = p.IdSexo left join Categoria as cat on cat.ID = p.IdCategoria
+left join Sexo as s on s.ID = p.IdSexo left join Categoria as cat on cat.ID = p.IdCategoria 
+where cat.Nombre LIKE '%REMERA%'
 
 delete from Producto
 drop TABLE Producto
 --arreglar ID unico
-select * from Producto
+select * from SubCategoria
 
 insert into Producto (Nombre, Descripcion, IdMarca, IdCategoria, IdTalle, IdColor1, IdColor2, IdColor3, IdSexo, Imagen_principal,
 Imagen_2, Imagen_3, Precio, Precio_promo, Stock, Ancho, Largo , Estrella, New, Garage)
@@ -140,6 +141,7 @@ update  Categoria  set IDSub= 3
 
  select cat.Id, cat.Nombre, IDSub,sub.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub
 
+ select cat.ID, cat.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub where sub.ID=1
 
 
  drop database Laurentino_Srebernich_DB

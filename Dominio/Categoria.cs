@@ -28,6 +28,13 @@ namespace Dominio
             Nombresub = nombresu;
         }
 
+        public Categoria(int id, string nombre)
+        {
+            ID = id;
+            Nombre = nombre;
+         
+        }
+
         public Categoria() { }
         public override string ToString()
         {
