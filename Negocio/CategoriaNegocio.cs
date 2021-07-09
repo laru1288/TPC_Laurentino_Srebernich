@@ -65,5 +65,34 @@ namespace Negocio
             }
 
         }
+
+        public List<Categoria> listar_partedeabajo()
+        {
+
+            List<Categoria> lista = new List<Categoria>();
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.SetearConsulta("  select cat.ID, cat.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub where sub.ID=2");
+                datos.EjecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    lista.Add(new Categoria((int)datos.Lector[0], (string)datos.Lector[1]));
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
     }
 }

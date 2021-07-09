@@ -11,32 +11,20 @@ namespace TPC_Laurentino_Srebernich
 {
     public partial class SiteMaster : MasterPage
     {
+        public List<Categoria> subcategorias_partedearriba = new List<Categoria>();
+        public List<Categoria> subcategorias_partedeabajo = new List<Categoria>();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Cargar_desplegables();
-        }
-
-        protected void Cargar_desplegables()
-        {
             CategoriaNegocio partesdearria = new CategoriaNegocio();
-
-            try
-            {
-                if (!IsPostBack)
-                {
-                    //Carga las marcas
-                  /*  D_partedearriba.DataSource = partesdearria.listar_partedearriba();
-                    D_partedearriba.DataTextField = "Nombre";
-                    D_partedearriba.DataValueField = "Id";
-                    D_partedearriba.DataBind();*/
-                }
-             }
-            catch (Exception ex)
-            {
-
-                throw ex ;
+            if (!IsPostBack) { 
+                subcategorias_partedearriba = partesdearria.listar_partedearriba();
+                subcategorias_partedeabajo = partesdearria.listar_partedeabajo();
             }
+
         }
+
+       
 
     }
 }

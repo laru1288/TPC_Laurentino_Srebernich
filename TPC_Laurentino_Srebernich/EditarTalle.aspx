@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarTalle.aspx.cs" Inherits="TPC_Laurentino_Srebernich.EditarTalle" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-         <form runat="server">
+      
     <br />
     <br />
     <br />  
@@ -18,5 +18,5 @@
 </fieldset>
 
           <asp:button type="submit" text="Modificar" ID="B_modificar_talle" class="btn btn-primary" runat="server" Onclick="B_modificar_talle_Click" />
-  </form>
+
 </asp:Content>

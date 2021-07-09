@@ -16,7 +16,7 @@ namespace Negocio
 
             try
             {
-                datos.SetearConsulta("select Id,Nombre from Talle");
+                datos.SetearConsulta("select distinct Id,Nombre from Talle");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())

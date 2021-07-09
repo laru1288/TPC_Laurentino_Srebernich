@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Agregar_Categoria.aspx.cs" Inherits="TPC_Laurentino_Srebernich.Agregar_Categoria" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-        <form runat="server">
+       
     <br />
     <br />
     <br />
@@ -18,5 +18,5 @@
     </div>
 
            <asp:button type="submit" text="Agregar" ID="B_agregar_categoria" class="btn btn-primary" runat="server" OnClick="B_agregar_categoria_Click" />
- </form>
+
 </asp:Content>

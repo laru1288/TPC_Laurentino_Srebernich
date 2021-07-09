@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Editables.aspx.cs" Inherits="TPC_Laurentino_Srebernich.Editables" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <form runat="server">
+
         <br />
         <br />
         <p>Agregar/Modificar Categorias</p>
@@ -163,5 +163,5 @@
 
         <br /><br />
 
-    </form>
+
 </asp:Content>

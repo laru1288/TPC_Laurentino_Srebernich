@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Productos.aspx.cs" Inherits="TPC_Laurentino_Srebernich.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
- <form runat="server">
+
   <table class="table table-success table-striped" id="tabla_modificar" style="width:100%" > 
        <thead> 
         <tr>
@@ -99,7 +99,7 @@
 
 
 
-  </form>
+
 
 
 </asp:Content>

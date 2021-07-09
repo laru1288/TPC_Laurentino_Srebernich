@@ -106,7 +106,9 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("update  Producto  set Nombre = '" +nuevo.Nombre+ "' , Descripcion = '" +nuevo.Descripcion+ "', IdMarca = '" +nuevo.Marcas.ID+ "', IdCategoria= '" +nuevo.Categorias.ID+ "', IdTalle= '" +nuevo.Talle.ID+ "', IdColor1= '" + nuevo.Color.ID + "', IdColor2= '" + nuevo.Color_2.ID + "', IdSexo= '" + nuevo.Sexo.ID + "', Imagen_principal= '" + nuevo.Imagen_principal + "',Imagen_2= '" + nuevo.Imagen_2 + "', Imagen_3= '" + nuevo.Imagen_3 + "', Precio= '" + nuevo.Precio + "', Precio_promo= '" + nuevo.Precio_prom + "', Stock= '" + nuevo.Stock + "', Ancho= '" + nuevo.Ancho + "', Largo= '" + nuevo.Largo + "', Estrella= '" + nuevo.Estrella + "', New= '" + nuevo.Nuevo + "', Garage= '" + nuevo.Garage + "' where ID = '" + nuevo.ID+ "' ");
+                datos.setear_parametro("@precio", nuevo.Precio);
+                datos.setear_parametro("@preciopromo", nuevo.Precio_prom);
+                datos.SetearConsulta("update  Producto  set Nombre = '" +nuevo.Nombre+ "' , Descripcion = '" +nuevo.Descripcion+ "', IdMarca = '" +nuevo.Marcas.ID+ "', IdCategoria= '" +nuevo.Categorias.ID+ "', IdTalle= '" +nuevo.Talle.ID+ "', IdColor1= '" + nuevo.Color.ID + "', IdColor2= '" + nuevo.Color_2.ID + "', IdSexo= '" + nuevo.Sexo.ID + "', Imagen_principal= '" + nuevo.Imagen_principal + "',Imagen_2= '" + nuevo.Imagen_2 + "', Imagen_3= '" + nuevo.Imagen_3 + "', Precio= @precio, Precio_promo= @preciopromo, Stock= '" + nuevo.Stock + "', Ancho= '" + nuevo.Ancho + "', Largo= '" + nuevo.Largo + "', Estrella= '" + nuevo.Estrella + "', New= '" + nuevo.Nuevo + "', Garage= '" + nuevo.Garage + "' where ID = '" + nuevo.ID+ "' ");
                 datos.EjectutarAccion();
 
             }

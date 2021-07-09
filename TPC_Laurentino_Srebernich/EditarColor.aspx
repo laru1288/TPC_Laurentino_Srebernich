@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditarColor.aspx.cs" Inherits="TPC_Laurentino_Srebernich.EditarColor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-         <form runat="server">
+        
     <br />
     <br />
     <br />  
@@ -18,5 +18,5 @@
 </fieldset>
 
           <asp:button type="submit" text="Modificar" ID="B_modificar_color" class="btn btn-primary" runat="server" Onclick="B_modificar_color_Click" />
-  </form>
+
 </asp:Content>

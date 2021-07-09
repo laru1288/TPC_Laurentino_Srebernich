@@ -54,5 +54,10 @@ namespace Negocio
             conexion.Open();
             comando.ExecuteNonQuery();
         }
+
+        public void setear_parametro(string nombre_parametro, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre_parametro, valor);
+        }
     }
 }
