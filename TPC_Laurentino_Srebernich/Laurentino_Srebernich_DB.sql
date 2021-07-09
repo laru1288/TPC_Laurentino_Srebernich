@@ -77,14 +77,14 @@ insert into Producto values ('Campera', '',5,3,3,4,6,4,1,'\Imagenes\Campera_algo
 insert into Producto values ('Buzo', '',5,3,3,4,6,4,1,'\Imagenes\Buzo_algodon_adidas.jpeg','','', 1700,'',10,'','',0,1,0 )
 insert into Producto values ('Boxer', '',5,3,3,4,6,4,1,'\Imagenes\Boxer_algodon_tommy_hilfiger.jpeg','','', 1700,'',10,'','',0,1,0 )
 insert into Producto values ('Pantalon deportivo', 'microfriba, elastizado, chupin',3,3,3,4,6,4,1,'\Imagenes\pantalon_deportiva_nike2.jpeg','\Imagenes\Pantalon_deportivo_nike.jpeg','', 1700,'',10,'','',0,1,0 )
-insert into Producto values ('lalalalalala', 'lalalalala',1,2,3,4,4,4,2,'\Imagenes\Calza_termica.jpeg','','', 10000,'',100,'','',0,1,0 )
+insert into Producto values ('laura', 'lalalalala',1,1,3,4,4,4,2,'\Imagenes\Calza_termica.jpeg','','', 10000,'',100,'','',0,1,0 )
 
 
 
 
 
 insert into Sexo values ( 'Mujer'), ( 'Hombre')
-insert into Categoria values ('Remeras',1), ('Buzos',1), ('Pantalones',2), ('Remeras termicas',1), ('Ropa interior',2), ('Camperas',1),
+insert into Categoria values ('Calzas',1), ('Buzos',1), ('Pantalones',2), ('Remeras termicas',1), ('Ropa interior',2), ('Camperas',1),
 ('Tops deportivos',1), ('Shorts de banio',2), ('Boxer',3), ('Conjuntos',3)
 insert into Talle values ( 's'), ( 'm'), ( 'l'), ( 'xl')
 insert into Marca values ('Adidas'), ( 'Gap'), ( 'Nike'), ( 'Levis'), ( 'Calvin Klein'), ( 'Tomy Highfier')
@@ -101,18 +101,20 @@ left join Sexo s on s.ID= p.IdSexo
 left join Categoria  cat on cat.ID=p.IdCategoria
 left join SubCategoria sub on cat.IDSub=sub.ID
 
-Select p.Nombre, p.Descripcion, p.Imagen_principal, p.Imagen_2, p.Imagen_3, 
+Select distinct p.Nombre, p.Descripcion, p.Imagen_principal, p.Imagen_2, p.Imagen_3, 
 p.Stock, p.Precio, p.Precio_promo, p.Ancho, p.Largo, p.Estrella, p.New, p.Garage, p.IdMarca,
 p.IdTalle, p.IdColor1, p.IdColor2, p.IdColor3, p.IdSexo, p.IdCategoria, p.ID, cat.IDSub from Producto as p
 left join Marca as m  on p.IdMarca = m.ID left join Talle as t on t.ID = p.IdTalle left join
 Color as c on c.ID = p.IdColor1 or c.ID=p.IdColor2 or c.ID=p.IdColor3
 left join Sexo as s on s.ID = p.IdSexo left join Categoria as cat on cat.ID = p.IdCategoria 
-where cat.Nombre LIKE '%REMERA%'
+where cat.Nombre = 'ROPA INTERIOR'
 
 delete from Producto
 drop TABLE Producto
 --arreglar ID unico
 select * from SubCategoria
+select * from Producto
+select * from Categoria
 
 insert into Producto (Nombre, Descripcion, IdMarca, IdCategoria, IdTalle, IdColor1, IdColor2, IdColor3, IdSexo, Imagen_principal,
 Imagen_2, Imagen_3, Precio, Precio_promo, Stock, Ancho, Largo , Estrella, New, Garage)
