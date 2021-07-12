@@ -122,7 +122,7 @@ values ()
 
 select Id,Nombre from Color
 
-delete from Producto where ID = 2
+delete from Talle where ID = 5
 
 select * from Categoria
 select * from Talle
@@ -143,7 +143,9 @@ update  Categoria  set IDSub= 3
 
  select cat.Id, cat.Nombre, IDSub,sub.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub
 
- select cat.ID, cat.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub where sub.ID=1
+ select cat.ID, cat.Nombre  from Categoria cat left join SubCategoria sub on sub.ID=cat.IDSub where sub.ID=2
 
 
  drop database Laurentino_Srebernich_DB
+
+ update  Producto  set Nombre = 'Campera' , Descripcion = '', IdMarca = '5', IdCategoria= '3', IdTalle= '3', IdColor1= '4', IdColor2= '6', IdSexo= '1', Imagen_principal= '\Imagenes\Campera_algodon_gap.jpeg',Imagen_2= '', Imagen_3= '', Precio= 1700,00, Precio_promo= 0,00, Stock= '50', Ancho= '0', Largo= '0', Estrella= 'False', New= 'True', Garage= 'False' where ID = '16' 

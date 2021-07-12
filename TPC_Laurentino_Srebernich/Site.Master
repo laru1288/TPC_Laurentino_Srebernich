@@ -19,9 +19,12 @@
 </head>
 <body>
    <form runat="server"> 
+        <asp:ScriptManager runat="server">
+           
+        </asp:ScriptManager>
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-light" >
-            <div class="container-fluid">
+           <div class="container-fluid"> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -92,24 +95,62 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                   
                 </div>
-            </div>
+            </div> 
         </nav>
-        <br /><br />
+        <br />
    
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
 
             <hr />
-            </div>
+          
      
-        <br /> <br /><br />
-            <footer style="text-align:center">
-                         
-               Medios de pago: efectivo <i class="fas fa-money-bill-wave"></i> Mercado Pago <i class="far fa-credit-card"></i> Transferencia bancaria <i class="fas fa-university"></i>
+     
+           <footer>
+               <div class="container">
                
-            </footer>
-        
+                   <div class="sec aboutus">
+                       <h2>Acerca de Outfit Urquiza</h2>
+                       <p>somos una marca de Urquiza</p>
+                       <ul class="sci">
+                       <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li> 
+                       <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                      </ul>
+                   </div>               
+               <div class="sec quickLinks">
+                   <h2>Navegacion</h2>
+                   <ul>
+                       <li><a href="#">Productos </a></li>
+                       <li><a href="#">Carrito </a></li>
+                       <li><a href="#">Contacto </a></li>
+                   </ul>
+               </div>
+               <div class="sec contact">
+                   <h2>Contactanos</h2>
+                   <ul class="info">
+                       <li>
+                           <span><i class="fas fa-map-marker-alt"></i></span>
+                           <span>Villa Urquiza<br>
+                           Bs.As. Argentina<br /></span>
+                       </li>
+                        <li>
+                           <span><i class="fas fa-phone"></i></span>
+                          <p><a href="tel:1173644038">11 7364 4038</a></p>
+                       </li>
+                        <li>
+                           <span><i class="fas fa-envelope"></i></span>
+                          <p><a href="mailto:gabriela.solferini@gmail.com">gabriela.solferini@gmail.com</a></p>
+                       </li>
+                   </ul>
+               
+               </div>
+                 </div>
+           </footer>
+        <div class="copyrightText">
+            <p>Creado por Regina Laurentino & Laura Srebernich</p>
+        </div>
 
   
 
@@ -153,6 +194,7 @@
           });
 
       </script>
-      </form>       
+    </div>
+  </form>       
 </body>
 </html>

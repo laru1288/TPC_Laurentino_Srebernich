@@ -1,14 +1,29 @@
 ﻿* {
-   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1{
-   
+body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
+/*.body-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;   
+    width: 100%;
+    height: 100vh;
+}*/
+
+/*MENU*/
 nav {
-    background-color: #7DB6AD;
-   
+    background-color: #7DB6AD;  
     
 }
 
@@ -61,27 +76,166 @@ nav {
             border-radius: 6px 0 6px 6px;
         }
 
-
+/*Inicia footer*/
 
 footer {
-    background-color: #7DB6AD;
-    position:fixed;
-    bottom: 0;
-    height: 60px;
+    position: relative;
     width: 100%;
-    font-size: large;
-    display:flex;
-    text-align:center;
+    height: auto;
+    padding: 50px 100px;
+    background: #7DB6AD;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 
+        footer .container .sec {
+            margin-right: 30px;
+        }
 
+            footer .container .sec .aboutus {
+                width: 40%;
+            }
 
- 
+        footer .container h2 {
+            position: relative;
+            color: black;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
 
+            footer .container h2:before {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 50px;
+                height: 2px;
+                background: #7DB6AD;
+            }
 
+    footer p {
+        color: black;
+    }
 
+.sci {
+    margin-top: 20px;
+    display: flex;
+}
 
-    
+    .sci li {
+        list-style: none;
+    }
 
-   
+        .sci li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #7DB6AD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+            .sci li a:hover {
+                color: white;
+            }
+
+            .sci li a .fab {
+                color: black;
+                font-size: 20px;
+            }
+
+.quickLinks {
+    position: relative;
+    width: 25%;
+}
+
+    .quickLinks ul li {
+        list-style: none;
+    }
+
+        .quickLinks ul li a {
+            color: black;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+            .quickLinks ul li a:hover {
+                color: white;
+            }
+
+.contact {
+    width: calc(35% -60px);
+    margin-right: 0 !important;
+}
+
+    .contact .info {
+        position: relative;
+    }
+
+        .contact .info li {
+            display: flex;
+            margin-bottom: 16px;
+        }
+
+            .contact .info li span:nth-child(1) {
+                color: black;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+
+            .contact .info li span {
+                color: black;
+            }
+
+            .contact .info li a {
+                color: black;
+                text-decoration: none;
+            }
+
+                .contact .info li a:hover {
+                    color: #7DB6AD;
+                }
+
+.copyrightText {
+    width: 100%;
+    background: #7DB6AD;
+    padding: 8px 100px;
+    text-align: center;
+    color: black;
+}
+
+@media(max-width:991px) {
+    footer {
+        padding: 40px;
+    }
+
+        footer .container {
+            flex-direction: column;
+        }
+
+            footer .container .sec {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+
+                footer .container .sec .aboutus, .quickLinks, .contact {
+                    width: 100%;
+                }
+
+    .copyrightText {
+        padding: 8px 40px;
+    }
+}
