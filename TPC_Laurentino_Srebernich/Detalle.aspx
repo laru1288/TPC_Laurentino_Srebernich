@@ -58,6 +58,8 @@
                                     </div>
                                     <div class="col d-grid">
                                    
+                                     <asp:button type="submit" ID="Agregar" class="btn btn-primary btn-lg" name="submit" text="Agregar al carrito" OnClick="Agregar_Click" runat="server"></asp:button>
+                                    
                                     </div>
                                 </div>
                             </form>
