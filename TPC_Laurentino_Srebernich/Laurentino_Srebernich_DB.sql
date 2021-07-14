@@ -91,6 +91,9 @@ insert into Marca values ('Adidas'), ( 'Gap'), ( 'Nike'), ( 'Levis'), ( 'Calvin 
 insert into Color values ( 'Negro'), ( 'rosa'), ( 'gris claro'), ( 'gris melagne'), ( 'gris topo'), ( 'fucsia')
 insert into Subcategoria VALUES ( 'PARTE DE ARRIBA'), ( 'PARTE DE ABAJO'), ( 'ROPA INTERIOR')
 
+select * from Producto where Estrella=1
+update  Producto set Imagen_principal ='\Imagenes\Calza_termica.jpeg' where Estrella=1
+
 Select p.Nombre, p.Descripcion, p.Imagen_principal, p.Imagen_2, p.Imagen_3, p.Stock,
 p.Precio, p.Precio_promo, p.Ancho,  p.Largo, p.Estrella, p.New, p.Garage,
 p.IdMarca, p.IdTalle, p.IdColor1, p.IdColor2,p.IdColor3, p.IdSexo, p.IdCategoria, cat.IDSub
