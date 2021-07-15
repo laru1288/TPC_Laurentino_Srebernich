@@ -14,6 +14,8 @@ namespace TPC_Laurentino_Srebernich
         protected void Page_Load(object sender, EventArgs e)
         {
             Cargar_desplegables();
+
+                         
         }
 
         protected void Agregar_nuevo(object sender, EventArgs e)
@@ -50,7 +52,9 @@ namespace TPC_Laurentino_Srebernich
                 nuevo.Talle.ID = Convert.ToInt32(D_Talle.SelectedItem.Value);
                 
                 Agregar.Agregar(nuevo);
-                Response.Redirect("Exito.aspx");
+                
+
+                //Response.Redirect("Exito.aspx");
 
             }
             catch (Exception ex)

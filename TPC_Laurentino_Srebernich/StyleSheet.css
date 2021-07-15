@@ -5,7 +5,7 @@
 }
 
 body {
-    padding-bottom:200px;
+    /*padding-bottom:200px;*/
 }
 
 
@@ -68,7 +68,7 @@ nav {
 /*Inicia footer*/
 
 footer {
-    position:fixed;
+    position:relative ;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -78,6 +78,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
 }
 
     footer .container {
