@@ -15,12 +15,21 @@ namespace TPC_Laurentino_Srebernich
     {
 
         /// <summary>
-        /// Control Checkbox_categorias.
+        /// Control rediobtn.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList Checkbox_categorias;
+        protected global::System.Web.UI.WebControls.RadioButtonList rediobtn;
+
+        /// <summary>
+        /// Control radiotalles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList radiotalles;
     }
 }

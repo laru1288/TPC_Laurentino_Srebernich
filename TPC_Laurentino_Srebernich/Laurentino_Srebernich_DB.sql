@@ -77,7 +77,7 @@ insert into Producto values ('Campera', '',5,3,3,4,6,4,1,'\Imagenes\Campera_algo
 insert into Producto values ('Buzo', '',5,3,3,4,6,4,1,'\Imagenes\Buzo_algodon_adidas.jpeg','','', 1700,'',10,'','',0,1,0 )
 insert into Producto values ('Boxer', '',5,3,3,4,6,4,1,'\Imagenes\Boxer_algodon_tommy_hilfiger.jpeg','','', 1700,'',10,'','',0,1,0 )
 insert into Producto values ('Pantalon deportivo', 'microfriba, elastizado, chupin',3,3,3,4,6,4,1,'\Imagenes\pantalon_deportiva_nike2.jpeg','\Imagenes\Pantalon_deportivo_nike.jpeg','', 1700,'',10,'','',0,1,0 )
-insert into Producto values ('laura', 'lalalalala',1,1,3,4,4,4,2,'\Imagenes\Calza_termica.jpeg','','', 10000,'',100,'','',0,1,0 )
+insert into Producto values ('laura', 'lalalalala',1,1,3,4,4,4,2,'\Imagenes\Calza_termica.jpeg','','', 10000,'',100,'','',1,0,0 )
 
 
 
@@ -118,6 +118,10 @@ drop TABLE Producto
 select * from SubCategoria
 select * from Producto
 select * from Categoria
+
+select * from Producto p left join Categoria cat on p.IdCategoria= cat.ID
+left join SubCategoria sub on sub.ID=cat.IDSub
+where sub.ID=1
 
 insert into Producto (Nombre, Descripcion, IdMarca, IdCategoria, IdTalle, IdColor1, IdColor2, IdColor3, IdSexo, Imagen_principal,
 Imagen_2, Imagen_3, Precio, Precio_promo, Stock, Ancho, Largo , Estrella, New, Garage)

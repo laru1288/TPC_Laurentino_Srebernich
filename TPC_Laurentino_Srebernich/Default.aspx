@@ -44,7 +44,7 @@
     </div>
 <!--Productos estrella -->
 <div class="small-container">
-    <h2 class="title">Productos destacados</h2>
+    <h2 class="title">Productos</h2>
     <div class="rowproductosestrella">
        
              <%foreach ( Dominio.Producto item in lista)

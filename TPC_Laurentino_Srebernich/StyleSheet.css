@@ -329,3 +329,112 @@ footer {
     }
 
 }
+
+
+/*Pagina de productos*/
+.containerproductos {
+    min-width: 100px;
+    width: 20%;
+}
+
+    .containerproductos .navigationproductos{
+        
+    }
+
+    .containerproductos .navigationproductos ul{
+        position:relative;
+        top:0;
+        left:0;
+    }
+
+        .containerproductos .navigationproductos ul li{
+            position: relative;
+            list-style:none;
+            width:100%;
+        }
+
+        .containerproductos .navigationproductos ul li a{
+            position:relative;
+            display:block;
+            width:100%;
+            display:flex;
+            text-decoration:none;
+            color: black;
+            font-weight:500;
+        }
+
+            .containerproductos .navigationproductos ul li a .titlecatgoria{
+                position:relative;
+                display:block;
+               /* height:60px;*/
+                /*line-height:60px;*/
+                white-space:nowrap;
+            }
+
+.small-container-productos {
+    display: flex;
+    gap: 2em;
+}
+.containerproductos .navigationproductos ul li a {
+    line-height: 20px;
+}
+.containerproductos .navigationproductos ul li a:hover {
+    color: #7DB6AD;
+    transition: 0.3s;
+}
+.containerproductos .navigationproductos ul,
+.containerproductos .navigationproductos .form-check {
+    padding: 0;
+}
+
+
+.containerproductos .navigationproductos td {
+    display: flex;
+    align-items: center;
+}
+
+.containerproductos .navigationproductos td input {
+    margin-top: 0;
+    margin-right: 4px;
+}
+
+.containerproductos .navigationproductos td label {
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.rowproductos {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+}
+
+.card-productoss {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px 0.1px #565656;
+    border-radius: 4px;
+    padding: 24px;
+    transition: 1s;
+}
+
+    .card-productoss:hover {
+        transform: translateY(-5px);
+    }
+
+@media only screen and (max-width: 800px) {
+    .small-container-productos {
+        flex-wrap: wrap;
+    }
+}
+
+.title-products {
+    text-align: center;
+    font-size:16px;
+    font-weight: 500;
+    position: relative;
+    color: #555;
+}

@@ -146,6 +146,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Inicio.aspx" />
     <Content Include="NewArrivals.aspx" />
+    <Content Include="Parte_de_arriba.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Modificar.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -358,6 +359,13 @@
     </Compile>
     <Compile Include="NewArrivals.aspx.designer.cs">
       <DependentUpon>NewArrivals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parte_de_arriba.aspx.cs">
+      <DependentUpon>Parte_de_arriba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parte_de_arriba.aspx.designer.cs">
+      <DependentUpon>Parte_de_arriba.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RopaInterior.aspx.cs">
