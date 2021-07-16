@@ -46,6 +46,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="ColorNegocio.cs" />
     <Compile Include="Consulta.cs" />
+    <Compile Include="EmailService.cs" />
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SexoNegocio.cs" />
