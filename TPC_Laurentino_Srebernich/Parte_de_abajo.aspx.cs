@@ -9,7 +9,7 @@ using Negocio;
 
 namespace TPC_Laurentino_Srebernich
 {
-    public partial class Parte_de_arriba : System.Web.UI.Page
+    public partial class Parte_de_abajo : System.Web.UI.Page
     {
         public List<Producto> listado = new List<Producto>();
         public List<Producto> final = new List<Producto>();
@@ -30,21 +30,21 @@ namespace TPC_Laurentino_Srebernich
             try
             {
                 cargar_filtros_categorias();
-                filtro = 1;
+                filtro = 2;
                 subcategoria = subcat.listar();
                 listado = negocio.consulta();
-                foreach(Dominio.Producto item in listado)
+                foreach (Dominio.Producto item in listado)
                 {
                     
                         if (item.Categorias.IDSub == filtro) final.Add(item);
-                                          
+                    
                 }
-               
-                                               
-                 //categorias = consultacategorias.listar();
-                 //Categoria aux = categorias.Find(x => x.Nombre == filtro);
-                 //id = aux.ID;
-                 Session.Add("listaproduct", final);
+
+
+                //categorias = consultacategorias.listar();
+                //Categoria aux = categorias.Find(x => x.Nombre == filtro);
+                //id = aux.ID;
+                Session.Add("listaproduct", final);
 
             }
             catch (Exception ex)

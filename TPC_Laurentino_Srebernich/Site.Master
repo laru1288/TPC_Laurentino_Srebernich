@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/Default">Inicio</a>
+                            <a class="nav-link active" href="/Inicio">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
@@ -41,20 +41,21 @@
 
                                 <li class="dropdown dropdown-submenu">
 
-                                    <a class="dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parte de arriba</a>
+                                    <a class="dropdown-toggle" href="/Parte_de_arriba" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parte de arriba</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <%foreach (Dominio.Categoria item in subcategorias_partedearriba)
                                             { %>
                                         <a class="dropdown-item" href="Productos.aspx?seleccionado=<%=item.Nombre %>"><%=item.Nombre %></a>
 
                                         <%  } %>
+
                                     </div>
                                 </li>
 
 
 
                                 <li class="dropdown dropdown-submenu">
-                                    <a class="dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parte de abajo</a>
+                                    <a class="dropdown-toggle" href="/Parte_de_abajo" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parte de abajo</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <%foreach (Dominio.Categoria item in subcategorias_partedeabajo)
                                             { %>
@@ -64,7 +65,7 @@
                                     </div>
                                 </li>
 
-                                <li><a class="dropdown-item" href="/Productos?seleccionado=Ropa interior">Ropa interior</a></li>
+                                <li><a class="dropdown-item" href="/RopaInterior">Ropa interior</a></li>
                                 <li><a class="dropdown-item" href="/GarageSale">Garage sale</a></li>
                             </ul>
                         </li>
@@ -75,8 +76,8 @@
                             <a class="nav-link" href="https://bit.ly/3c7ZPvC"><i class="fab fa-whatsapp"></i></a>
                         </li>
 
-                        <li><a class="nav-link" href="/Carrito">Mi Carrito<i class="fas fa-shopping-cart"></i><asp:Label Text="s" ID="lblsuma"  runat="server" style="color:black"/></a>
-                            
+                        <li><a class="nav-link" href="/Carrito">Mi Carrito<i class="fas fa-shopping-cart"></i><asp:Label Text="s" ID="lblsuma" runat="server" Style="color: black" /></a>
+
                         </li>
 
 
@@ -116,17 +117,17 @@
                     <h2>Acerca de Outfit Urquiza</h2>
                     <p>somos una marca de Urquiza</p>
                     <ul class="sci">
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/outfit.urquiza/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://bit.ly/3c7ZPvC"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.facebook.com/outfit.urquiza"><i class="fab fa-facebook"></i></a></li>
                     </ul>
                 </div>
                 <div class="sec quickLinks">
                     <h2>Navegacion</h2>
                     <ul>
-                        <li><a href="#">Productos </a></li>
-                        <li><a href="#">Carrito </a></li>
-                        <li><a href="#">Contacto </a></li>
+                        <li><a href="/Productos">Productos </a></li>
+                        <li><a href="/Carrito">Carrito </a></li>
+                        <li><a href="/Contacto">Contacto </a></li>
                     </ul>
                 </div>
                 <div class="sec contact">

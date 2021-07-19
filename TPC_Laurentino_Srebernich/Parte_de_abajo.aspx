@@ -1,8 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Parte_de_arriba.aspx.cs" Inherits="TPC_Laurentino_Srebernich.Parte_de_arriba" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Parte_de_abajo.aspx.cs" Inherits="TPC_Laurentino_Srebernich.Parte_de_abajo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-    <h2 class="title">Parte de arriba</h2>
+    <h2 class="title">Parte de abajo</h2>
 
     <div class="small-container-productos">
         <div class="containerproductos">
