@@ -20,10 +20,10 @@ namespace TPC_Laurentino_Srebernich
             var aux2 = aux1.ToString();
             lblsuma.Text = aux2;
 
-            CategoriaNegocio partesdearria = new CategoriaNegocio();
+            CategoriaNegocio partesdearriba = new CategoriaNegocio();
             if (!IsPostBack) { 
-                subcategorias_partedearriba = partesdearria.listar_partedearriba();
-                subcategorias_partedeabajo = partesdearria.listar_partedeabajo();
+                subcategorias_partedearriba = partesdearriba.listar_partedearriba();
+                subcategorias_partedeabajo = partesdearriba.listar_partedeabajo();
             }
 
         }

@@ -16,12 +16,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="Parte_de_abajo.aspx">
                             <span class="titlecatgoria">Parte de abajo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="RopaInterior.aspx">
                             <span class="titlecatgoria">Ropa Interior</span>
                         </a>
                     </li>

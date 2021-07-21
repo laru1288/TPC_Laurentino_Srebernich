@@ -17,6 +17,12 @@ namespace TPC_Laurentino_Srebernich
         CategoriaNegocio Categorias = new CategoriaNegocio();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!(Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.ADMIN))
+            {
+                Session.Add("error", "No tienes permisos para ingresar a esta pantalla. Necesitas nivel admin.");
+                Response.Redirect("Error.aspx", false);
+            }
+
             Cargar_desplegables();
             var id = (Request.QueryString["id"]);
             buscar_id(Convert.ToInt32(id));

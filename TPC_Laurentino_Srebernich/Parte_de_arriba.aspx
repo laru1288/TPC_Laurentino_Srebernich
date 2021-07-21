@@ -10,17 +10,17 @@
                 <asp:Label for="leyenda" class="title-products" runat="server">Categorias </asp:Label>
                 <ul>
                     <li>
-                        <a href="#">
-                            <span class="titlecatgoria">Parte de arriba</span>
+                        <a href="/Productos">
+                            <span class="titlecatgoria">Productos</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/Parte_de_abajo">
                             <span class="titlecatgoria">Parte de abajo</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/RopaInterior">
                             <span class="titlecatgoria">Ropa Interior</span>
                         </a>
                     </li>

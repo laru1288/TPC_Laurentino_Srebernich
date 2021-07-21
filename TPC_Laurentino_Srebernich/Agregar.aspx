@@ -9,7 +9,7 @@
     <% if (IsPostBack)
         { %>
     <h2>Producto cargado con exito!</h2>
-    <a href="/Editables" class="btn btn-primary">Salir</a>
+    <a href="/Pagina2LoguinAdmin" class="btn btn-primary">Salir</a>
     <%} %>
     <fieldset enable="true">
         <asp:Label for="leyenda" class="form-label" runat="server">Agregar nuevo Producto  </asp:Label>

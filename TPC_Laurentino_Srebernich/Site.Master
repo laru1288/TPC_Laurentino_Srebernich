@@ -34,7 +34,7 @@
                             <a class="nav-link active" href="/Inicio">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                            <a class="nav-link dropdown-toggle" href="/Productos" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: large">
                                 <li><a class="dropdown-item" href="/Productos">Ver todos los productos</a></li>
                                 <li><a class="dropdown-item" href="/NewArrivals">New arrivals</a></li>
@@ -48,7 +48,6 @@
                                         <a class="dropdown-item" href="Productos.aspx?seleccionado=<%=item.Nombre %>"><%=item.Nombre %></a>
 
                                         <%  } %>
-
                                     </div>
                                 </li>
 
@@ -75,19 +74,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://bit.ly/3c7ZPvC"><i class="fab fa-whatsapp"></i></a>
                         </li>
-
                         <li><a class="nav-link" href="/Carrito">Mi Carrito<i class="fas fa-shopping-cart"></i><asp:Label Text="s" ID="lblsuma" runat="server" Style="color: black" /></a>
-
-                        </li>
-
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Editar </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: large">
-                                <li><a class="dropdown-item" href="/Agregar">Agregar productos</a></li>
-                                <li><a class="dropdown-item" href="/Modificar">Modificar productos</a></li>
-                                <li><a class="dropdown-item" href="/Editables">Agregar y modificar otros</a></li>
-                            </ul>
                         </li>
 
                     </ul>
