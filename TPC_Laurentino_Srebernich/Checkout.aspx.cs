@@ -19,17 +19,15 @@ namespace TPC_Laurentino_Srebernich
         protected void EnvioMail()
         {
             EmailService emailservice = new EmailService();
-<<<<<<< HEAD
-           // emailservice.armarcorreo(TextMail.Text, /*asunto*/, /*mensaje*/);
-=======
+
             //emailservice.armarcorreo(TextMail.Text, /*asunto*/, /*mensaje*/);
->>>>>>> 77195532c47c1cca98e9aacc9dd16697ed1ed1c1
+
 
             try
             {
                 emailservice.enviarmail();
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
 
                 throw ex;
