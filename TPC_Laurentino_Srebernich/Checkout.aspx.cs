@@ -19,7 +19,7 @@ namespace TPC_Laurentino_Srebernich
         protected void EnvioMail()
         {
             EmailService emailservice = new EmailService();
-            emailservice.armarcorreo(TextMail.Text, /*asunto*/, /*mensaje*/);
+           // emailservice.armarcorreo(TextMail.Text, /*asunto*/, /*mensaje*/);
 
             try
             {
