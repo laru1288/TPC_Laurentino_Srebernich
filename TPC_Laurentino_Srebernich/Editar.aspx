@@ -109,6 +109,8 @@
      
 
     <asp:button type="submit" text="Modificar" ID="B_modificar" class="btn btn-primary" runat="server" OnClick="B_modificar_Click" />
+        <br />
+        <a href="/Pagina2LoguinAdmin" class="btn btn-primary">Salir</a>
       
 
 </fieldset>

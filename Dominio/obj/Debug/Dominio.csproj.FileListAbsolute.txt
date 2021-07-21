@@ -28,3 +28,9 @@ C:\Users\Laura\Desktop\TPC__Prog3\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Do
 C:\Users\Laura\Desktop\TPC__Prog3\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\Laura\Desktop\TPC__Prog3\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.dll
 C:\Users\Laura\Desktop\TPC__Prog3\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Laura\Desktop\tpprog3\TPC_Laurentino_Srebernich\Dominio\bin\Debug\Dominio.dll
+C:\Users\Laura\Desktop\tpprog3\TPC_Laurentino_Srebernich\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Laura\Desktop\tpprog3\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Laura\Desktop\tpprog3\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Laura\Desktop\tpprog3\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.dll
+C:\Users\Laura\Desktop\tpprog3\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.pdb

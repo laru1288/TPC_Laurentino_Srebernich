@@ -30,20 +30,20 @@
             <h2 class="title">Categorias</h2>
              <div class="rowcategorias">
             <div class="col-3">
-                <img src=".\Imagenes\pantalon_deportiva_nike2.jpeg" />
+                <a href="Parte_de_abajo.aspx"><img src=".\Imagenes\pantalon_deportiva_nike2.jpeg" />
             </div>
             <div class="col-3">
-                <img src=".\Imagenes\Conjunto_bando_ck_less.jpeg" />
+               <a href="RopaInterior.aspx"><img src=".\Imagenes\Conjunto_bando_ck_less.jpeg" />
             </div>
             <div class="col-3">
-                <img src=".\Imagenes\Campera_algodon_pink_love.jpeg" />
+                <a href="Parte_de_arriba.aspx"><img src=".\Imagenes\Campera_algodon_pink_love.jpeg" />
             </div>
         </div>
         </div>       
     </div>
 <!--Productos estrella -->
 <div class="small-container">
-    <h2 class="title">Productos</h2>
+    <h2 class="title">Productos destacados</h2>
     <div class="rowproductosestrella">
        
              <%foreach (Dominio.Producto item in lista)

@@ -18,7 +18,7 @@ namespace TPC_Laurentino_Srebernich
         public List<Talle> talles = new List<Talle>();
         public List<Clasificacion> subcategoria = new List<Clasificacion>();
 
-        public string filtro;
+        public int filtro;
         public int id;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,25 +30,21 @@ namespace TPC_Laurentino_Srebernich
             try
             {
                 cargar_filtros_categorias();
-                filtro = Request.QueryString["seleccionado"];
+                filtro = 1;
                 subcategoria = subcat.listar();
                 listado = negocio.consulta();
                 foreach(Dominio.Producto item in listado)
                 {
-                    foreach (Dominio.Clasificacion items in subcategoria) {
-                        if (item.Categorias.IDSub == items.ID) final.Add(item);
-                    }                        
+                    
+                        if (item.Categorias.IDSub == filtro) final.Add(item);
+                                          
                 }
                
-
-
-                if (filtro != null)
-                {
-                    categorias = consultacategorias.listar();
-                    Categoria aux = categorias.Find(x => x.Nombre == filtro);
-                    id = aux.ID;
-                }
-                Session.Add("listaproduct", listado);
+                                               
+                 //categorias = consultacategorias.listar();
+                 //Categoria aux = categorias.Find(x => x.Nombre == filtro);
+                 //id = aux.ID;
+                 Session.Add("listaproduct", final);
 
             }
             catch (Exception ex)

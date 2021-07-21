@@ -131,6 +131,7 @@
     <Content Include="EditarSexo.aspx" />
     <Content Include="EditarTalle.aspx" />
     <Content Include="Eliminar.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Exito.aspx" />
     <Content Include="Exito2.aspx" />
     <Content Include="favicon.ico" />
@@ -146,7 +147,12 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Inicio.aspx" />
+    <Content Include="Loguin.aspx" />
+    <Content Include="MenuLogin.aspx" />
     <Content Include="NewArrivals.aspx" />
+    <Content Include="Pagina1Login.aspx" />
+    <Content Include="Pagina2LoguinAdmin.aspx" />
+    <Content Include="Parte_de_abajo.aspx" />
     <Content Include="Parte_de_arriba.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Modificar.aspx" />
@@ -330,6 +336,13 @@
     <Compile Include="Eliminar.aspx.designer.cs">
       <DependentUpon>Eliminar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Exito.aspx.cs">
       <DependentUpon>Exito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -361,12 +374,47 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Loguin.aspx.cs">
+      <DependentUpon>Loguin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loguin.aspx.designer.cs">
+      <DependentUpon>Loguin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuLogin.aspx.cs">
+      <DependentUpon>MenuLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuLogin.aspx.designer.cs">
+      <DependentUpon>MenuLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewArrivals.aspx.cs">
       <DependentUpon>NewArrivals.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NewArrivals.aspx.designer.cs">
       <DependentUpon>NewArrivals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina1Login.aspx.cs">
+      <DependentUpon>Pagina1Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina1Login.aspx.designer.cs">
+      <DependentUpon>Pagina1Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pagina2LoguinAdmin.aspx.cs">
+      <DependentUpon>Pagina2LoguinAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagina2LoguinAdmin.aspx.designer.cs">
+      <DependentUpon>Pagina2LoguinAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Parte_de_abajo.aspx.cs">
+      <DependentUpon>Parte_de_abajo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Parte_de_abajo.aspx.designer.cs">
+      <DependentUpon>Parte_de_abajo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Parte_de_arriba.aspx.cs">
       <DependentUpon>Parte_de_arriba.aspx</DependentUpon>

@@ -19,6 +19,12 @@ namespace TPC_Laurentino_Srebernich
         public List<Talle> l_talle = new List<Talle>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!(Session["usuario"] != null && ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.ADMIN))
+            {
+                Session.Add("error", "No tienes permisos para ingresar a esta pantalla. Necesitas nivel admin.");
+                Response.Redirect("Error.aspx", false);
+            }
+
             CategoriaNegocio consulta_categoria = new CategoriaNegocio();
             try
             {
