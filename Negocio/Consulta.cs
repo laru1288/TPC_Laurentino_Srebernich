@@ -333,7 +333,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("insert into Clientes (Metodo) values ('" + nuevo.Mail + "', '" + nuevo.Nombre + "','" + nuevo.Apellido + "','" + nuevo.DNI + "','" + nuevo.Telefono + "','" + nuevo.Direccion + "','" + nuevo.Numero + "','" + nuevo.Cp + "','" + nuevo.Piso + "','" + nuevo.Entrecalles + "','" + nuevo.Provincia + "','" + nuevo.Localidad + "','" + nuevo.Observaciones + "')");
+                datos.SetearConsulta("insert into Clientes (Mail, Nombre, Apellido, DNI, Telefono, Direccion, Numero, CP, Piso, EntreCalle, Provincia, Localidad, Observaciones) values ('" + nuevo.Mail + "', '" + nuevo.Nombre + "','" + nuevo.Apellido + "','" + nuevo.DNI + "','" + nuevo.Telefono + "','" + nuevo.Direccion + "','" + nuevo.Numero + "','" + nuevo.Cp + "','" + nuevo.Piso + "','" + nuevo.Entrecalle + "','" + nuevo.Provincia + "','" + nuevo.Localidad + "','" + nuevo.Observaciones + "')");
                 datos.EjecutarLectura();
             }
             catch (Exception ex)
@@ -347,6 +347,68 @@ namespace Negocio
             }
 
         }
+
+
+        public void Modificar_Cliente(DatosCliente nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("update Clientes set Mail = '" + nuevo.Mail + "', Nombre = '" + nuevo.Nombre + "', Apellido = '" + nuevo.Apellido + "', DNI = '" + nuevo.DNI + "', Telefono = '" + nuevo.Telefono + "', Direccion = '" + nuevo.Direccion + "', Numero = '" + nuevo.Numero + "', CP = '" + nuevo.Cp + "', Piso = '" + nuevo.Piso + "', EntreCalle = '" + nuevo.Entrecalle + "', Provincia = '" + nuevo.Provincia + "', Localidad = '" + nuevo.Localidad + "', Observaciones = '" + nuevo.Observaciones + "' where ID ='" + nuevo.ID + "' ");
+                datos.EjectutarAccion();
+
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+        public void Agregar_Producto_Vendido(Producto_Vendido nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into Prod_Venta (Id_Venta, Id_Prod, Id_Color, Cant, Id_Talle, Precio) values ('" + nuevo.ID_Venta + "', '" + nuevo.ID_codigo_producto + "','" + nuevo.ID_Color + "','" + nuevo.Cantidad + "','" + nuevo.ID_talle + "','" + nuevo.Precio_vendido + "')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+        public void Agregar_Venta(Ventas nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into Venta (Fecha, Id_Cli, Id_Estado, Id_Metodo_Pago, Id_Tipo_Envio) values ('" + nuevo.fecha + "', '" + nuevo.ID_cliente + "','" + nuevo.Estado + "','" + nuevo.metodopago + "','" + nuevo.tipoenvio + "')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
 
     }
 }
