@@ -135,7 +135,7 @@ namespace TPC_Laurentino_Srebernich
 
         protected void Bfinalizarcompra_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Checkout.aspx");
+            Response.Redirect("PreCheckout.aspx");
         }
 
         public int sumacarrito()

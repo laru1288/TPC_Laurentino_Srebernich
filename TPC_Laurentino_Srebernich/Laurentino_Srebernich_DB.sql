@@ -156,3 +156,68 @@ update  Categoria  set IDSub= 3
  drop database Laurentino_Srebernich_DB
 
  update  Producto  set Nombre = 'Campera' , Descripcion = '', IdMarca = '5', IdCategoria= '3', IdTalle= '3', IdColor1= '4', IdColor2= '6', IdSexo= '1', Imagen_principal= '\Imagenes\Campera_algodon_gap.jpeg',Imagen_2= '', Imagen_3= '', Precio= 1700,00, Precio_promo= 0,00, Stock= '50', Ancho= '0', Largo= '0', Estrella= 'False', New= 'True', Garage= 'False' where ID = '16' 
+
+
+ use Laurentino_Srebernich_DB
+
+create table Usuarios(
+	ID int primary key not null identity (1,1),
+	Usuario varchar(50) not null,
+	Pass varchar(50),
+	TipoUser int not null
+)
+go
+
+INSERT INTO Usuarios values ('Test','Test',1)
+INSERT INTO Usuarios values ('TestAdmin','Test2',2)
+
+create table Clientes(
+	ID int primary key not null identity (1,1),
+	Nombre varchar(50) not null,
+	Apellido varchar(50) not null,
+	DNI int not null,
+	Telefono int not null,
+	Calle varchar(50) not null,
+	Numero int not null,
+	CP int not null,
+	Piso int not null,
+	EntreCalle varchar(70) not null,
+	Cod_Provincia int not null,
+	Observaciones varchar(150) not null
+)
+go
+
+Create table Metodo_Pago(
+	ID int primary key not null identity (1,1),
+	Metodo varchar(50) not null
+)
+go
+create table Tipo_Envio(
+	ID int primary key not null identity (1,1),
+	Envio varchar(50) not null
+)
+go
+create table Estado(
+	ID int primary key not null identity (1,1),
+	Estado varchar(50) not null
+)
+go
+create table Venta(
+	ID int primary key not null identity (1,1),
+	Fecha date not null,
+	Id_Cli int not null FOREIGN KEY REFERENCES Clientes(ID),
+	Id_Estado int not null FOREIGN KEY REFERENCES Estado(ID),
+	Id_Metodo_Pago int not null FOREIGN KEY REFERENCES Metodo_Pago(ID),
+	Id_Tipo_Envio int not null FOREIGN KEY REFERENCES Tipo_Envio(ID),
+	)
+	go
+create table Prod_Venta (
+	ID int primary key not null identity (1,1),
+	Id_Venta int not null FOREIGN KEY REFERENCES Venta(ID),
+	Id_Prod int not null FOREIGN KEY REFERENCES Producto(ID),
+	Id_Color int not null FOREIGN KEY REFERENCES Color(ID),
+	Cant int not null,
+	Id_Talle smallint not null FOREIGN KEY REFERENCES Talle(ID),
+	Precio money not null
+)
+go
