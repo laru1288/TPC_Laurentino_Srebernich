@@ -71,7 +71,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td><asp:Button Text="Finalizar compra" CssClass="btn btn-primary" ID="Bfinalizarcompra" Onclick="Bfinalizarcompra_Click" runat="server" /></td>
+                            <td><asp:Button Text="Iniciar compra" CssClass="btn btn-primary" ID="Bfinalizarcompra" Onclick="Bfinalizarcompra_Click" runat="server" /></td>
                         </tr>
 
                     </table>
