@@ -11,9 +11,10 @@ namespace TPC_Laurentino_Srebernich
 {
     public partial class Checkout : System.Web.UI.Page
     {
+        public static List<Dominio.Carrito> carritofinal;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            carritofinal = (List<Dominio.Carrito>)Session["listacarrito"];
         }
 
         protected void EnvioMail()
@@ -32,6 +33,11 @@ namespace TPC_Laurentino_Srebernich
 
                 throw ex;
             }
+
+        }
+
+        protected void B_aceptar_Click(object sender, EventArgs e)
+        {
 
         }
     }

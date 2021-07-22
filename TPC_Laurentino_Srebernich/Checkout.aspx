@@ -158,7 +158,7 @@
 
     <br />
     <br />
-    <asp:Button type="submit" Text="Aceptar" ID="B_aceptar" class="btn btn-primary" runat="server" />
+    <asp:Button type="submit" Text="Aceptar" ID="B_aceptar" class="btn btn-primary" OnClick="B_aceptar_Click" runat="server" />
 
 
 

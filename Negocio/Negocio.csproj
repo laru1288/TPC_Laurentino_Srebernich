@@ -46,12 +46,18 @@
     <Compile Include="Class1.cs" />
     <Compile Include="ColorNegocio.cs" />
     <Compile Include="Consulta.cs" />
+    <Compile Include="Datos_Cliente_Negocio.cs" />
     <Compile Include="EmailService.cs" />
+    <Compile Include="Estado_venta_negocio.cs" />
+    <Compile Include="Fecha_Negocio.cs" />
     <Compile Include="MarcaNegocio.cs" />
+    <Compile Include="Metodo_Pago_Negocio.cs" />
+    <Compile Include="Producto_vendido_Negocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SexoNegocio.cs" />
     <Compile Include="SubCategoriaNegocio.cs" />
     <Compile Include="TalleNegocio.cs" />
+    <Compile Include="Tipos_Envio_Negocio.cs" />
     <Compile Include="UsuarioNegocio.cs" />
   </ItemGroup>
   <ItemGroup>

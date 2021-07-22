@@ -78,6 +78,33 @@ namespace TPC_Laurentino_Srebernich
         protected global::System.Web.UI.WebControls.Label lbldescrip;
 
         /// <summary>
+        /// Control lbltalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbltalle;
+
+        /// <summary>
+        /// Control cantidadelegida.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cantidadelegida;
+
+        /// <summary>
+        /// Control Comprar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Comprar;
+
+        /// <summary>
         /// Control Agregar.
         /// </summary>
         /// <remarks>

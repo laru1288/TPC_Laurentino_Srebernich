@@ -15,8 +15,10 @@ namespace TPC_Laurentino_Srebernich
         int id = 0;
         int cantidad = 1;
         public bool promo = false;
+        public List<Marca> marca = new List<Marca>();
+        public List<Talle> talle = new List<Talle>();
 
-        Producto seleccionado, aux;
+        public Producto seleccionado, aux;
         protected void Page_Load(object sender, EventArgs e)
         {
             id = int.Parse(Request.QueryString["id"]);
@@ -30,7 +32,16 @@ namespace TPC_Laurentino_Srebernich
             lblprecioold.Text = seleccionado.Precio.ToString("0.00");
             lblprecioprom.Text = seleccionado.Precio_prom.ToString("0.00");
             if (seleccionado.Precio_prom > 0) { promo = true; }
-            lblmarca.Text = seleccionado.Marcas.Nombre;
+
+            //ver marca
+            MarcaNegocio consultamarca = new MarcaNegocio();
+            marca = consultamarca.listar();
+            lblmarca.Text = marca.Find(x => x.ID == seleccionado.Marcas.ID).Nombre;
+            //talle
+            TalleNegocio consultatalle = new TalleNegocio();
+            talle = consultatalle.listar();
+            lbltalle.InnerText = talle.Find(x => x.ID == seleccionado.Talle.ID).Nombre;
+
             lbldescrip.Text = seleccionado.Descripcion;
 
             //cantidad = Convert.ToInt32(txtCantidad.Text);
@@ -38,8 +49,62 @@ namespace TPC_Laurentino_Srebernich
             aux = seleccionado;
         }
 
+        protected void Comprar_Click(object sender, EventArgs e)
+        {
+            int cantidatext = Convert.ToInt32(cantidadelegida.Text);
+            //preguntar a lau como enviaba la cantidad
+            bool encontro = false;
+            var reemplazo = new Dominio.Carrito { };
+
+            foreach (Dominio.Carrito item in shoppingcart)
+            {
+                if (item.Producto.ID == id)
+                {
+                    encontro = true;
+                    reemplazo.Producto = item.Producto;
+                    reemplazo.Cant = item.Cant + 1;
+                    if (promo)
+                    {
+                        reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio_prom);
+                    }
+                    else
+                    {
+                        reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio);
+                    }
+
+                }
+            }
+
+
+            if (encontro == false)
+            {
+                if (promo)
+                {
+                    shoppingcart.Add(new Dominio.Carrito { Producto = aux, Cant = cantidatext, subtotal = aux.Precio_prom * cantidatext });
+                }
+                else
+                {
+                    shoppingcart.Add(new Dominio.Carrito { Producto = aux, Cant = cantidatext, subtotal = aux.Precio * cantidatext });
+                }
+
+                Session.Add("listacarrito", shoppingcart);
+                Response.Redirect("Checkout.aspx");
+            }
+            else
+            {
+                var eindex = shoppingcart.FindIndex(i => i.Producto.ID == reemplazo.Producto.ID);
+
+                shoppingcart[eindex] = reemplazo;
+                Response.Redirect("Checkout.aspx");
+            }
+
+
+        }
+
         protected void Agregar_Click(object sender, EventArgs e)
         {
+            int cantidatext = Convert.ToInt32(cantidadelegida.Text);
+            //preguntar a lau como enviaba la cantidad
             bool encontro = false;
             var reemplazo = new Dominio.Carrito { };
             
@@ -49,8 +114,15 @@ namespace TPC_Laurentino_Srebernich
                 {
                     encontro = true;
                     reemplazo.Producto = item.Producto;
-                    reemplazo.Cant = item.Cant + 1;
-                    reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio);
+                    reemplazo.Cant = item.Cant +1;
+                    if (promo)
+                    {
+                        reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio_prom);
+                    }
+                    else
+                    {
+                        reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio);
+                    }
 
                 }
             }
@@ -58,7 +130,15 @@ namespace TPC_Laurentino_Srebernich
 
             if (encontro == false)
             {
-                shoppingcart.Add(new Dominio.Carrito { Producto = aux, Cant = cantidad, subtotal = aux.Precio * cantidad });
+                if (promo)
+                {
+                    shoppingcart.Add(new Dominio.Carrito { Producto = aux, Cant = cantidatext, subtotal = aux.Precio_prom * cantidatext });
+                }
+                else
+                {
+                    shoppingcart.Add(new Dominio.Carrito { Producto = aux, Cant = cantidatext, subtotal = aux.Precio * cantidatext });
+                }
+               
                 Session.Add("listacarrito", shoppingcart);
                 Response.Redirect("Carrito.aspx");
             }

@@ -31,12 +31,7 @@
 
                             <%} %>
 
-                            <p class="py-2">
-
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-secondary"></i>
-
-                            </p>
+      
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <h6>Marca:</h6>
@@ -49,20 +44,52 @@
                             <h6>Descripcion:</h6>
                             <asp:Label Text="s" ID="lbldescrip" runat="server" />
 
-                            <form action="" method="GET">
-                                <input type="hidden" name="product-title" value="Activewear">
+                          
+                                
 
-                                <div class="row pb-3">
-                                    <div class="col d-grid">
-                                        <a href="Comprar.aspx" class="btn btn-primary btn-lg">Comprar</a>
+                              <h6>Specification:</h6>
+                            <ul class="list-unstyled pb-3">
+                                <li>Lorem ipsum dolor sit</li>
+                                <li>Amet, consectetur</li>
+                                <li>Adipiscing elit,set</li>
+                                <li>Duis aute irure</li>
+                                <li>Ut enim ad minim</li>
+                                <li>Dolore magna aliqua</li>
+                                <li>Excepteur sint</li>
+                            </ul>
+
+                            <input type="hidden" name="product-title" value="Activewear">
+                                   <div class="row">
+                                    <div class="col-auto">
+                                        <ul class="list-inline pb-3">
+                                            <li class="list-inline-item">Talle :
+                                                <input type="hidden" name="product-size" id="product-size" value="S">
+                                            </li>
+                                            <li class="list-inline-item"><span class="btn btn-success btn-size" style="background-color:#7DB6AD" id="lbltalle" runat="server"></span></li>
+                                             </ul>
                                     </div>
-                                    <div class="col d-grid">
                                    
-                                     <asp:button type="submit" ID="Agregar" class="btn btn-primary btn-lg" name="submit" text="Agregar al carrito" OnClick="Agregar_Click" runat="server"></asp:button>
+                                </div>   
+                                     <div class="col-auto">
+                                        <ul class="list-inline pb-3">
+                                            <li class="list-inline-item text-right">Cantidad
+                                                <input type="hidden" name="product-quanity" id="product-quanity" value="1">
+                                            </li>
+                                            <asp:TextBox ID="cantidadelegida" class="form-control" placeholder="Cantidad" runat="server"></asp:TextBox>
+                                        </ul>
+                                    </div>
+                            <div class="row pb-3">
+
+                                    <div class="col d-grid">
+                                    <asp:Button type="submit" ID="Comprar"  class="btn btn-primary btn-lg" name="submit" style="background-color:#7DB6AD" text="Comprar" runat="server" OnClick="Comprar_Click"/>
+                                          </div>
+                                    <div class="col d-grid">
+                                       
+                                     <asp:button type="submit" ID="Agregar" class="btn btn-primary btn-lg" name="submit" style="background-color:#7DB6AD" text="Agregar al carrito" OnClick="Agregar_Click" runat="server"></asp:button>
                                     
                                     </div>
                                 </div>
-                            </form>
+                           
 
                         </div>
                     </div>

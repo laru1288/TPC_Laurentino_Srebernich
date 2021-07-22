@@ -30,13 +30,13 @@
             <h2 class="title">Categorias</h2>
              <div class="rowcategorias">
             <div class="col-3">
-                <a href="Parte_de_abajo.aspx"><img src=".\Imagenes\pantalon_deportiva_nike2.jpeg" />
+                <a href="Parte_de_abajo.aspx"><img src=".\Imagenes\pantalon_deportiva_nike2.jpeg" /> </a>
             </div>
             <div class="col-3">
-               <a href="RopaInterior.aspx"><img src=".\Imagenes\Conjunto_bando_ck_less.jpeg" />
+               <a href="RopaInterior.aspx"><img src=".\Imagenes\Conjunto_bando_ck_less.jpeg" /></a>
             </div>
             <div class="col-3">
-                <a href="Parte_de_arriba.aspx"><img src=".\Imagenes\Campera_algodon_pink_love.jpeg" />
+                <a href="Parte_de_arriba.aspx"><img src=".\Imagenes\Campera_algodon_pink_love.jpeg" /></a>
             </div>
         </div>
         </div>       
@@ -44,6 +44,7 @@
 <!--Productos estrella -->
 <div class="small-container">
     <h2 class="title">Productos destacados</h2>
+   
     <div class="rowproductosestrella">
        
              <%foreach (Dominio.Producto item in lista)
@@ -52,7 +53,7 @@
                     {%>
                         
                 <div class="card-producto"> 
-                      <img src="<% = item.Imagen_principal %>"" class="card-img-top" alt="Imagen no disponible" onerror="this.src='./ind.jpeg';"/>
+                      <img src="<% = item.Imagen_principal %>"" class="card-img-top" alt="Imagen no disponible" />
                      
                           <h4 class ="card-title"> <%= item.Nombre %></h4>                       
                                 <p class="card-text"><%= item.Precio.ToString("0.00") %></p>                       
@@ -81,7 +82,7 @@
            <div class="card-producto"> 
                       <img src="<% = item.Imagen_principal %>"" class="card-img-top" alt="Imagen no disponible" onerror="this.src='./ind.jpeg';"/>
                      
-                          <h5 class ="card-title"> <%= item.Nombre %></h5>
+                          <h4 class ="card-title"> <%= item.Nombre %></h4>
                           <%if (item.Precio_prom > 0)
                               { %>
                                 <p class="card-text"><del><%= item.Precio.ToString("0.00") %></del></p>

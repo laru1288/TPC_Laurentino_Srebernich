@@ -77,7 +77,15 @@ namespace TPC_Laurentino_Srebernich
                 {
                     reemplazo.Producto = item.Producto;
                     reemplazo.Cant = item.Cant + 1;
-                    reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio);
+                    if (item.Producto.Precio_prom > 0)
+                    {
+                        reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio_prom);
+                    }
+                    else
+                    {
+                        reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio);
+                    }
+
 
                 }
             }
@@ -99,7 +107,15 @@ namespace TPC_Laurentino_Srebernich
                     reemplazo.Producto = item.Producto;
                     reemplazo.Cant = item.Cant - 1;
                     if (reemplazo.Cant <= 1) reemplazo.Cant = 1;
-                    reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio);
+                    if (item.Producto.Precio_prom > 0)
+                    {
+                        reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio_prom);
+                    }
+                    else
+                    {
+                        reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio);
+                    }
+                    
 
                 }
             }
@@ -115,6 +131,11 @@ namespace TPC_Laurentino_Srebernich
         {
             carrito.Clear();
             sumacar = 0;
+        }
+
+        protected void Bfinalizarcompra_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Checkout.aspx");
         }
 
         public int sumacarrito()
