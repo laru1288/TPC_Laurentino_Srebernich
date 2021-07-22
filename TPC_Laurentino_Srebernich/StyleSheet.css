@@ -709,3 +709,133 @@ ul {
         border-radius: 0px;
     }
 }
+
+/*CONTACT US */
+.highlighted-block {
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+    .highlighted-block a i:hover {
+        color: #7DB6AD;
+    }
+
+    dl {
+        margin-bottom: 0;
+        font-size: 14px
+    }
+
+    dl:after {
+        content: '';
+        display: table;
+        clear: both
+    }
+
+    dl dd, dl dt {
+        float: left;
+        display: inline-block;
+        padding: 12px 0;
+        color: #818a91
+    }
+
+    dl dt {
+        width: 50%;
+        font-weight: 600;
+        text-align: right;
+        padding-right: 16px
+    }
+
+    dl dd {
+        width: 50%;
+        padding-left: 16px;
+    }
+
+    dl.icon-holder dt {
+        width: 9%;
+        text-align: left;
+        padding: 4px 0;
+        font-size: 16px;
+        line-height: 25px
+    }
+
+    dl.icon-holder dd {
+        width: 91%;
+        line-height: 25px;
+        padding: 4px 10px
+    }
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+    .social-icons li {
+        display: inline-block;
+        margin-bottom: 4px
+    }
+
+        .social-icons li.title {
+            margin-right: 15px;
+            text-transform: uppercase;
+            color: #96a2b2;
+            font-weight: 700;
+            font-size: 13px
+        }
+
+    .social-icons a {
+        background-color: #eceeef;
+        color: #818a91;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 44px;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        margin-right: 8px;
+        border-radius: 100%;
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear
+    }
+
+        .social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+            color: #fff;
+            background-color: #7DB6AD;
+        }
+
+    .social-icons.size-sm a {
+        line-height: 34px;
+        height: 34px;
+        width: 34px;
+        font-size: 14px
+    }
+
+    .social-icons a.facebook:hover {
+        background-color: #7DB6AD;
+    }
+
+    .social-icons a.rss:hover {
+        background-color: #7DB6AD;
+    }
+
+    .social-icons a.google-plus:hover {
+        background-color: #7DB6AD;
+    }
+
+    .social-icons a.twitter:hover {
+        background-color: #7DB6AD;
+    }
+
+    .social-icons a.linkedin:hover {
+        background-color: #7DB6AD;
+    }
+
+.btn {
+    margin: 30px 0px;
+    padding: 15px;
+    background: #7DB6AD;
+    border-color: #7DB6AD;
+    width: 150px;
+}
+
