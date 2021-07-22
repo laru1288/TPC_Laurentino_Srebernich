@@ -13,6 +13,6 @@ namespace Dominio
         public int ID_cliente { get; set; }
         public Estado_venta Estado { get; set; }
         public Metodo_Pago metodopago { get; set; }
-        public Tipo_Envio iipoenvio { get; set; }
+        public Tipo_Envio tipoenvio { get; set; }
     }
 }
