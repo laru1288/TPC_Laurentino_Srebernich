@@ -16,12 +16,12 @@ namespace Negocio
 
             try
             {
-                datos.SetearConsulta(" ");
+                datos.SetearConsulta("select ID, Id_Venta, Id_Prod, Id_Color, Cant, Id_Talle, Precio from Prod_Venta ");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
                 {
-                  //  lista.Add(new Producto_Vendido((int)datos.Lector[0], (string)datos.Lector[1], (int)datos.Lector[2], (string)datos.Lector[3]));
+                    lista.Add(new Producto_Vendido((int)datos.Lector["ID"], (int)datos.Lector["Id_Venta"], (int)datos.Lector["Id_Prod"], (int)datos.Lector["Id_Color"], (int)datos.Lector["Cant"], (int)datos.Lector["Id_Talle"], (int)datos.Lector["Precio"]));
                 }
                 return lista;
             }

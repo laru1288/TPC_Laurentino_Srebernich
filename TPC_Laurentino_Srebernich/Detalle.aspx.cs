@@ -114,7 +114,7 @@ namespace TPC_Laurentino_Srebernich
                 {
                     encontro = true;
                     reemplazo.Producto = item.Producto;
-                    reemplazo.Cant = item.Cant +1;
+                    reemplazo.Cant = item.Cant + cantidatext;
                     if (promo)
                     {
                         reemplazo.subtotal = (reemplazo.Cant * item.Producto.Precio_prom);

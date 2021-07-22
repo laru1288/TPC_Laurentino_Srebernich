@@ -154,6 +154,7 @@
     <Content Include="Pagina2LoguinAdmin.aspx" />
     <Content Include="Parte_de_abajo.aspx" />
     <Content Include="Parte_de_arriba.aspx" />
+    <Content Include="PreCheckout.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Modificar.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -422,6 +423,13 @@
     </Compile>
     <Compile Include="Parte_de_arriba.aspx.designer.cs">
       <DependentUpon>Parte_de_arriba.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreCheckout.aspx.cs">
+      <DependentUpon>PreCheckout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreCheckout.aspx.designer.cs">
+      <DependentUpon>PreCheckout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RopaInterior.aspx.cs">

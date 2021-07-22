@@ -15,6 +15,15 @@ namespace TPC_Laurentino_Srebernich
     {
 
         /// <summary>
+        /// Control TextDocumento.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextDocumento;
+
+        /// <summary>
         /// Control TextMail.
         /// </summary>
         /// <remarks>
@@ -40,15 +49,6 @@ namespace TPC_Laurentino_Srebernich
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextNombre;
-
-        /// <summary>
-        /// Control TextDocumento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextDocumento;
 
         /// <summary>
         /// Control TextTelefono.

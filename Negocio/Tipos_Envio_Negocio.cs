@@ -16,12 +16,12 @@ namespace Negocio
 
             try
             {
-                datos.SetearConsulta(" ");
+                datos.SetearConsulta("select ID, Envio from Tipo_Envio");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
                 {
-                    //lista.Add(new Tipo_Envio((int)datos.Lector[0], (string)datos.Lector[1], (int)datos.Lector[2], (string)datos.Lector[3]));
+                    lista.Add(new Tipo_Envio((int)datos.Lector["ID"], (string)datos.Lector["Envio"]));
                 }
                 return lista;
             }

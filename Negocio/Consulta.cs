@@ -327,5 +327,26 @@ namespace Negocio
             }
 
         }
+
+        public void Agregar_Cliente(DatosCliente nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into Clientes (Metodo) values ('" + nuevo.Mail + "', '" + nuevo.Nombre + "','" + nuevo.Apellido + "','" + nuevo.DNI + "','" + nuevo.Telefono + "','" + nuevo.Direccion + "','" + nuevo.Numero + "','" + nuevo.Cp + "','" + nuevo.Piso + "','" + nuevo.Entrecalles + "','" + nuevo.Provincia + "','" + nuevo.Localidad + "','" + nuevo.Observaciones + "')");
+                datos.EjecutarLectura();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
     }
 }

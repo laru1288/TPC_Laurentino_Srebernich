@@ -46,3 +46,9 @@ E:\UTN\PROG 3\TP\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.csproj.Asse
 E:\UTN\PROG 3\TP\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 E:\UTN\PROG 3\TP\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.dll
 E:\UTN\PROG 3\TP\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Dominio\bin\Debug\Dominio.dll
+C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.dll
+C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Dominio\obj\Debug\Dominio.pdb

@@ -15,7 +15,17 @@
         <h4 class="mb-3">Completar</h4>
         <div class="row">
             <div class="col-sm-12 col-md-12">
-                <!-- Telefono -->
+
+                 <div class="col-sm-12 col-md-2">
+                <!-- Documento -->
+                <div class="form-group">
+                    <label for="txtNroDocumento">Nro de Documento *</label>
+                    <asp:TextBox ID="TextDocumento" Type="text" Class="form-control" placeholder="Documento" required="true" runat="server" ></asp:TextBox>
+                    <div class="invalid-feedback">Documento requerido</div>
+                </div>
+            </div>
+
+                <!-- Mail -->
                 <div class="form-group">
                     <label for="txtMail">Mail *</label>
                     <asp:TextBox ID="TextMail" Type="text" Class="form-control" placeholder="xxxxxx@gmail.com" required="true" runat="server"></asp:TextBox>
@@ -39,14 +49,6 @@
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-2">
-                <!-- Documento -->
-                <div class="form-group">
-                    <label for="txtNroDocumento">Nro de Documento *</label>
-                    <asp:TextBox ID="TextDocumento" Type="text" Class="form-control" placeholder="Documento" required="true" runat="server"></asp:TextBox>
-                    <div class="invalid-feedback">Documento requerido</div>
-                </div>
-            </div>
 
             <div class="col-sm-12 col-md-2">
                 <!-- Telefono -->
