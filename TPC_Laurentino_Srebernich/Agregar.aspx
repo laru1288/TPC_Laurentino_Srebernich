@@ -1,17 +1,82 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Agregar.aspx.cs" Inherits="TPC_Laurentino_Srebernich.Agregar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <script>
+        function validar() {
+            var Nombre = document.getElementById("<%=textNombre.ClientID%>").value;
+            var Descripcion = document.getElementById("<%=TextDescripcion.ClientID%>").value;
+            var Stock = document.getElementById("<%=TextStock.ClientID%>").value;
+            var Precio = document.getElementById("<%=TextPrecio.ClientID%>").value;
+            var Ancho = document.getElementById("<%=TextAncho.ClientID%>").value;
+            var Largo = document.getElementById("<%=TextLargo.ClientID%>").value;
+            var valido = true;
+
+            if (Nombre === "") {
+                $("#<%=textNombre.ClientID%>").removeClass("is-valid");
+                $("#<%=textNombre.ClientID%>").addClass("is-invalid");
+                valido = false;
+            } else {
+                $("#<%=textNombre.ClientID%>").removeClass("is-invalid");
+                $("#<%=textNombre.ClientID%>").addClass("is-valid");
+            }
+
+            if (Descripcion === "") {
+                $("#<%=TextDescripcion.ClientID%>").removeClass("is-valid");
+                  $("#<%=TextDescripcion.ClientID%>").addClass("is-invalid");
+                valido = false;
+            } else {
+                $("#<%=TextDescripcion.ClientID%>").removeClass("is-invalid");
+                  $("#<%=TextDescripcion.ClientID%>").addClass("is-valid");
+            }
+
+            if (Stock === "") {
+                $("#<%=TextStock.ClientID%>").removeClass("is-valid");
+                  $("#<%=TextStock.ClientID%>").addClass("is-invalid");
+                valido = false;
+            } else {
+                $("#<%=TextStock.ClientID%>").removeClass("is-invalid");
+                  $("#<%=TextStock.ClientID%>").addClass("is-valid");
+            }
+
+            if (Precio === "") {
+                $("#<%=TextPrecio.ClientID%>").removeClass("is-valid");
+                   $("#<%=TextPrecio.ClientID%>").addClass("is-invalid");
+                valido = false;
+            } else {
+                $("#<%=TextPrecio.ClientID%>").removeClass("is-invalid");
+                   $("#<%=TextPrecio.ClientID%>").addClass("is-valid");
+               }
+
+            if (Ancho === "") {
+                $("#<%=TextAncho.ClientID%>").removeClass("is-valid");
+                   $("#<%=TextAncho.ClientID%>").addClass("is-invalid");
+                valido = false;
+            } else {
+                $("#<%=TextAncho.ClientID%>").removeClass("is-invalid");
+                   $("#<%=TextAncho.ClientID%>").addClass("is-valid");
+            }
+
+            if (Largo === "") {
+                $("#<%=TextLargo.ClientID%>").removeClass("is-valid");
+                    $("#<%=TextLargo.ClientID%>").addClass("is-invalid");
+                valido = false;
+            } else {
+                $("#<%=TextLargo.ClientID%>").removeClass("is-invalid");
+                    $("#<%=TextLargo.ClientID%>").addClass("is-valid");
+                }
+
+            if (!valido) {
+                return false;
+            }
+            return true;
+        }
+    </script>
 
     <br />
     <br />
     <br />
 
-    <% if (IsPostBack)
-        { %>
-    <h2>Producto cargado con exito!</h2>
-    <a href="/Pagina2LoguinAdmin" class="btn btn-primary">Salir</a>
-    <%} %>
-
+ 
        <div class="container-checkout">
         <div class="py-5 text-center">
             <img class="mb-4 d-block mx-auto" src=".\Imagenes\logo.jpg" width="72" height="72" />
@@ -29,7 +94,7 @@
                 <!-- Nombre -->
                 <div class="form-group">
                     <label for="txtMail">Nombre *</label>
-                   <asp:TextBox ID="textNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
+                   <asp:TextBox ID="textNombre" class="form-control" ClientIDMode="Static" placeholder="Nombre" runat="server"></asp:TextBox>
                     <div class="invalid-feedback">Nombre requerido</div>
                 </div>
             </div>
@@ -37,7 +102,7 @@
                 <!-- Descripcion -->
                 <div class="form-group">
                     <label for="txtApellido">Descripcion *</label>
-                 <asp:TextBox ID="TextDescripcion" class="form-control" placeholder="Descripcion" runat="server"></asp:TextBox>
+                 <asp:TextBox ID="TextDescripcion" class="form-control" ClientIDMode="Static" placeholder="Descripcion" runat="server"></asp:TextBox>
                     <div class="invalid-feedback">Descripcion requerido</div>
                 </div>
             </div>
@@ -45,7 +110,7 @@
                 <!-- Imagen principal -->
                 <div class="form-group">
                     <label for="txtNombre">Imagen principal *</label>
-                    <asp:TextBox ID="TextImagenprincipal" class="form-control" placeholder="Imagen principal" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextImagenprincipal" class="form-control" ClientIDMode="Static" placeholder="Imagen principal" runat="server"></asp:TextBox>
                     <div class="invalid-feedback">Imagen principal requerido</div>
                 </div>
             </div>
@@ -54,7 +119,7 @@
                 <!-- Imagen secundaria -->
                 <div class="form-group">
                     <label for="txtNroDocumento">Imagen secundaria *</label>
-                   <asp:TextBox ID="Textimagen2" class="form-control" placeholder="Imagen secundaria" runat="server"></asp:TextBox>
+                   <asp:TextBox ID="Textimagen2" class="form-control" ClientIDMode="Static" placeholder="Imagen secundaria" runat="server"></asp:TextBox>
                     <div class="invalid-feedback">Imagen secundaria requerido</div>
                 </div>
             </div>
@@ -63,7 +128,7 @@
                 <!-- Imagen terciaria -->
                 <div class="form-group">
                     <label for="txtTelefono">Imagen terciaria *</label>
-                    <asp:TextBox ID="TextImagen3" class="form-control" placeholder="Imagen terciaria" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextImagen3" class="form-control" ClientIDMode="Static" placeholder="Imagen terciaria" runat="server"></asp:TextBox>
                     <div class="invalid-feedback">Imagen terciaria requerido</div>
                 </div>
             </div>
@@ -71,7 +136,8 @@
                 <!--Stock -->
                 <div class="form-group">
                     <label for="txtDireccion">Stock *</label>
-                     <asp:TextBox ID="TextStock" class="form-control" placeholder="Stock" runat="server"></asp:TextBox>
+                     <asp:TextBox ID="TextStock" class="form-control" ClientIDMode="Static" placeholder="Stock" runat="server"></asp:TextBox>
+                    <asp:RangeValidator ErrorMessage="Solo podes ingresar numeros" ControlToValidate="TextStock" runat="server"></asp:RangeValidator>
                     <div class="invalid-feedback">Stock requerido</div>
                 </div>
             </div>
@@ -80,7 +146,8 @@
                 <!-- Precio -->
                 <div class="form-group">
                     <label for="txtNumero">Precio *</label>
-                  <asp:TextBox ID="TextPrecio" class="form-control" placeholder="Precio" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="TextPrecio" class="form-control" ClientIDMode="Static" placeholder="Precio" runat="server"></asp:TextBox>
+                      <asp:RangeValidator ErrorMessage="Solo podes ingresar numeros" ControlToValidate="TextPrecio" runat="server"></asp:RangeValidator>
                     <div class="invalid-feedback">Precio requerido</div>
                 </div>
             </div>
@@ -89,7 +156,8 @@
                 <!-- Precio promo -->
                 <div class="form-group">
                     <label for="txtPiso">Precio promo *</label>
-                     <asp:TextBox ID="Textpreciopromo" class="form-control" placeholder="Precio promo" runat="server"></asp:TextBox>
+                     <asp:TextBox ID="Textpreciopromo" class="form-control" ClientIDMode="Static" placeholder="Precio promo" runat="server"></asp:TextBox>
+                     <asp:RangeValidator ErrorMessage="Solo podes ingresar numeros" ControlToValidate="Textpreciopromo" runat="server"></asp:RangeValidator>
                     <div class="invalid-feedback">Precio promo requerido</div>
                 </div>
             </div>
@@ -98,7 +166,8 @@
                 <!-- Ancho -->
                 <div class="form-group">
                     <label for="txtEntrecalles">Ancho *</label>
-                    <asp:TextBox ID="TextAncho" class="form-control" placeholder="Ancho" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextAncho" class="form-control" ClientIDMode="Static" placeholder="Ancho" runat="server"></asp:TextBox>
+                      <asp:RangeValidator ErrorMessage="Solo podes ingresar numeros" ControlToValidate="TextAncho" runat="server"></asp:RangeValidator>
                     <div class="invalid-feedback">Ancho requerido</div>
                 </div>
             </div>
@@ -107,7 +176,8 @@
                 <!-- Largo -->
                 <div class="form-group">
                     <label for="txtProvincia">Largo *</label>
-                    <asp:TextBox ID="TextLargo" class="form-control" placeholder="Largo" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextLargo" class="form-control" ClientIDMode="Static" placeholder="Largo" runat="server"></asp:TextBox>
+                     <asp:RangeValidator ErrorMessage="Solo podes ingresar numeros" ControlToValidate="TextLargo" runat="server"></asp:RangeValidator>
                     <div class="invalid-feedback">Largo requerido</div>
                 </div>
             </div>
@@ -116,20 +186,28 @@
                 <!-- Seleccionar -->
                 <div class="form-group">
                     <label for="txtLocalidad">Seleccionar *</label>
-                      <div class="form-check">
-                            <asp:CheckBox ID="CheckBox1" runat="server" />
-                            <asp:Label for="Estrella" class="form-check-label" runat="server">Estrella </asp:Label>
+
+                    <div class="form-check">
+                            <input id="TipoCheckBox1" name="tipo" type="radio" runat="server" class="form-check-input" style="font-size: medium" required />
+                            <label for="Estrella">Estrella</label>
+
                         </div>
+
                         <div class="form-check">
-                            <asp:CheckBox ID="CheckBox2" runat="server" />
-                            <asp:Label for="New" class="form-check-label" runat="server">New </asp:Label>
+                            <input id="TipoCheckBox2" name="tipo" type="radio" runat="server" class="form-check-input" style="font-size: medium" required />
+                            <label for="New">New</label>
+                            
                         </div>
+
                         <div class="form-check">
-                            <asp:CheckBox ID="CheckBox3" runat="server" />
-                            <asp:Label for="Garage" class="form-check-label" runat="server">Garage </asp:Label>
+                           <input id="TipoCheckBox3" name="tipo" type="radio" class="form-check-input" runat="server" style="font-size: medium" required />
+                            <label for="acuGarageerdo">Garage</label>
+                            
                         </div>
+                    
                     <div class="invalid-feedback">Seleccionar requerido</div>
                 </div>
+
             </div>
 
             <div class="col-sm-12 col-md-2">
@@ -205,7 +283,7 @@
   
     <br />
     <br />
-    <asp:Button type="submit" Text="Agregar" ID="B_agregar" class="btn btn-primary" runat="server" Style="background-color:#7DB6AD" OnClick="Agregar_nuevo" />
+    <asp:Button type="submit" Text="Agregar" ID="B_agregar" OnClientClick="return validar()" class="btn btn-primary" runat="server" Style="background-color:#7DB6AD" OnClick="Agregar_nuevo" />
     <!--VIEJO -->          
         
            

@@ -49,9 +49,9 @@ namespace TPC_Laurentino_Srebernich
             D_Color1.SelectedIndex = D_Color1.Items.IndexOf(D_Color1.Items.FindByValue(Aeditar.Color.ID.ToString()));
             D_Color2.SelectedIndex = D_Color2.Items.IndexOf(D_Color2.Items.FindByValue(Aeditar.Color_2.ID.ToString()));
             TextDescripcion.Text = Aeditar.Descripcion;
-            if (Aeditar.Estrella) CheckBox1.Checked=true;
-            if (Aeditar.Garage) CheckBox3.Checked = true;
-            if (Aeditar.Nuevo) CheckBox2.Checked = true;
+            if (Aeditar.Estrella) TipoCheckBox1.Checked=true;
+            if (Aeditar.Garage) TipoCheckBox3.Checked = true;
+            if (Aeditar.Nuevo) TipoCheckBox2.Checked = true;
             Textimagen2.Text = Aeditar.Imagen_2;
 			TextImagen3.Text = Aeditar.Imagen_3;
 			TextImagenprincipal.Text = Aeditar.Imagen_principal;
@@ -120,6 +120,11 @@ namespace TPC_Laurentino_Srebernich
 
         protected void B_modificar_Click(object sender, EventArgs e)
         {
+            Page.Validate();
+            if (!Page.IsValid)
+            {
+                return;
+            }
 
             Consulta Modificar = new Consulta();
             Producto nuevo = new Producto();
@@ -138,14 +143,14 @@ namespace TPC_Laurentino_Srebernich
                     nuevo.Color.ID = Convert.ToInt32(D_Color1.SelectedItem.Value);
                     nuevo.Color_2.ID = Convert.ToInt32(D_Color2.SelectedItem.Value);
                     nuevo.Descripcion = TextDescripcion.Text;
-                    nuevo.Estrella = CheckBox1.Checked;
-                    nuevo.Garage = CheckBox3.Checked;
+                    nuevo.Estrella = TipoCheckBox1.Checked;
+                    nuevo.Garage = TipoCheckBox3.Checked;
                     nuevo.Imagen_2 = Textimagen2.Text;
                     nuevo.Imagen_3 = TextImagen3.Text;
                     nuevo.Imagen_principal = TextImagenprincipal.Text;
                     nuevo.Largo = Convert.ToInt32(TextLargo.Text);
                     nuevo.Marcas.ID = Convert.ToInt32(D_Marcas.SelectedItem.Value);
-                    nuevo.Nuevo = CheckBox2.Checked;
+                    nuevo.Nuevo = TipoCheckBox2.Checked;
                     nuevo.Precio = Convert.ToDecimal(TextPrecio.Text);
                     nuevo.Precio_prom = Convert.ToDecimal(Textpreciopromo.Text);
                     nuevo.Sexo.ID = Convert.ToInt16(D_Sexo.SelectedItem.Value);

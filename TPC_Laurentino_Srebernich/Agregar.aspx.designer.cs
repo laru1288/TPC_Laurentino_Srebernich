@@ -105,31 +105,31 @@ namespace TPC_Laurentino_Srebernich
         protected global::System.Web.UI.WebControls.TextBox TextLargo;
 
         /// <summary>
-        /// Control CheckBox1.
+        /// Control TipoCheckBox1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton TipoCheckBox1;
 
         /// <summary>
-        /// Control CheckBox2.
+        /// Control TipoCheckBox2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton TipoCheckBox2;
 
         /// <summary>
-        /// Control CheckBox3.
+        /// Control TipoCheckBox3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton TipoCheckBox3;
 
         /// <summary>
         /// Control D_Categoria.

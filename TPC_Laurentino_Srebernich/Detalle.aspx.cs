@@ -95,7 +95,7 @@ namespace TPC_Laurentino_Srebernich
                 var eindex = shoppingcart.FindIndex(i => i.Producto.ID == reemplazo.Producto.ID);
 
                 shoppingcart[eindex] = reemplazo;
-                Response.Redirect("Checkout.aspx");
+                Response.Redirect("PreCheckout.aspx");
             }
 
 

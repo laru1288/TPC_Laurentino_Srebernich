@@ -24,8 +24,12 @@ namespace TPC_Laurentino_Srebernich
                          
         }
 
-        protected void Agregar_nuevo(object sender, EventArgs e)
-        {
+        protected void Agregar_nuevo(object sender, EventArgs e) {
+            Page.Validate();
+            if (!Page.IsValid) {
+                return;
+            } 
+
             Consulta Agregar = new Consulta();
             Producto nuevo = new Producto();
             nuevo.Categorias = new Categoria();
@@ -43,14 +47,14 @@ namespace TPC_Laurentino_Srebernich
                 nuevo.Color.ID = Convert.ToInt32(D_Color1.SelectedItem.Value);
                 nuevo.Color_2.ID = Convert.ToInt32(D_Color2.SelectedItem.Value);
                 nuevo.Descripcion = TextDescripcion.Text;
-                nuevo.Estrella = CheckBox1.Checked;
-                nuevo.Garage = CheckBox3.Checked;
+                nuevo.Estrella = TipoCheckBox1.Checked;
+                nuevo.Garage = TipoCheckBox3.Checked;
                 nuevo.Imagen_2 = Textimagen2.Text;
                 nuevo.Imagen_3 = TextImagen3.Text;
                 nuevo.Imagen_principal = TextImagenprincipal.Text;
                 nuevo.Largo = Convert.ToInt32(TextLargo.Text);
                 nuevo.Marcas.ID = Convert.ToInt32(D_Marcas.SelectedItem.Value);
-                nuevo.Nuevo = CheckBox2.Checked;
+                nuevo.Nuevo = TipoCheckBox2.Checked;
                 nuevo.Precio = Convert.ToDecimal(TextPrecio.Text);
                 nuevo.Precio_prom = Convert.ToDecimal(Textpreciopromo.Text);
                 nuevo.Sexo.ID = Convert.ToInt16(D_Sexo.SelectedItem.Value);

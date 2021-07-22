@@ -22,6 +22,11 @@ namespace TPC_Laurentino_Srebernich
 
         protected void B_agregar_marca_Click(object sender, EventArgs e)
         {
+            Page.Validate();
+            if (!Page.IsValid)
+            {
+                return;
+            }
             Consulta Agregar = new Consulta();
             Marca nuevo = new Marca();
 

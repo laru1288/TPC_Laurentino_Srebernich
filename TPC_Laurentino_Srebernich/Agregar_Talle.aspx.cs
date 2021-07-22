@@ -22,6 +22,11 @@ namespace TPC_Laurentino_Srebernich
 
         protected void B_agregar_talle_Click(object sender, EventArgs e)
         {
+            Page.Validate();
+            if (!Page.IsValid)
+            {
+                return;
+            }
             Consulta Agregar = new Consulta();
             Talle nuevo = new Talle();
 
