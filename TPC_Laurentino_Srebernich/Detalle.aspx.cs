@@ -51,6 +51,11 @@ namespace TPC_Laurentino_Srebernich
 
         protected void Comprar_Click(object sender, EventArgs e)
         {
+            Page.Validate();
+            if (!Page.IsValid)
+            {
+                return;
+            }
             int cantidatext = Convert.ToInt32(cantidadelegida.Text);
             //preguntar a lau como enviaba la cantidad
             bool encontro = false;
@@ -88,7 +93,7 @@ namespace TPC_Laurentino_Srebernich
                 }
 
                 Session.Add("listacarrito", shoppingcart);
-                Response.Redirect("Checkout.aspx");
+                Response.Redirect("PreCheckout.aspx");
             }
             else
             {
@@ -103,6 +108,11 @@ namespace TPC_Laurentino_Srebernich
 
         protected void Agregar_Click(object sender, EventArgs e)
         {
+            Page.Validate();
+            if (!Page.IsValid)
+            {
+                return;
+            }
             int cantidatext = Convert.ToInt32(cantidadelegida.Text);
             //preguntar a lau como enviaba la cantidad
             bool encontro = false;

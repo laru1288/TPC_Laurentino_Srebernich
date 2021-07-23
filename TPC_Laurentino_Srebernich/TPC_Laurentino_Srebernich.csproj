@@ -146,6 +146,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Gracoasporsucompra.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="Loguin.aspx" />
     <Content Include="MenuLogin.aspx" />
@@ -367,6 +368,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Gracoasporsucompra.aspx.cs">
+      <DependentUpon>Gracoasporsucompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gracoasporsucompra.aspx.designer.cs">
+      <DependentUpon>Gracoasporsucompra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>

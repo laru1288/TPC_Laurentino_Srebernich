@@ -2,6 +2,30 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+     <script>
+        function validar() {
+            var canbtidad = document.getElementById("<%=cantidadelegida.ClientID%>").value;
+           var valido = true;
+
+            if (canbtidad === "") {
+                $("#<%=cantidadelegida.ClientID%>").removeClass("is-valid");
+                $("#<%=cantidadelegida.ClientID%>").addClass("is-invalid");
+                valido = false;
+            } else {
+                $("#<%=cantidadelegida.ClientID%>").removeClass("is-invalid");
+                $("#<%=cantidadelegida.ClientID%>").addClass("is-valid");
+            }
+
+          
+
+            if (!valido) {
+                return false;
+            }
+            return true;
+        }
+     </script>   
+    <br />
+
     <section class="bg-light">
         <div class="container pb-5">
             <div class="row">
@@ -75,17 +99,18 @@
                                             <li class="list-inline-item text-right">Cantidad
                                                 <input type="hidden" name="product-quanity" id="product-quanity" value="1">
                                             </li>
-                                            <asp:TextBox ID="cantidadelegida" class="form-control" placeholder="Cantidad" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="cantidadelegida" text="1" ClientIDMode="Static" class="form-control" placeholder="Cantidad" runat="server"></asp:TextBox>
+                                               
                                         </ul>
                                     </div>
                             <div class="row pb-3">
 
                                     <div class="col d-grid">
-                                    <asp:Button type="submit" ID="Comprar"  class="btn btn-primary btn-lg" name="submit" style="background-color:#7DB6AD" text="Comprar" runat="server" OnClick="Comprar_Click"/>
+                                    <asp:Button type="submit" ID="Comprar"  class="btn btn-primary btn-lg" name="submit" OnClientClick="return validar()" style="background-color:#7DB6AD" text="Comprar" runat="server" OnClick="Comprar_Click"/>
                                           </div>
                                     <div class="col d-grid">
                                        
-                                     <asp:button type="submit" ID="Agregar" class="btn btn-primary btn-lg" name="submit" style="background-color:#7DB6AD" text="Agregar al carrito" OnClick="Agregar_Click" runat="server"></asp:button>
+                                     <asp:button type="submit" ID="Agregar" class="btn btn-primary btn-lg" name="submit" OnClientClick="return validar()" style="background-color:#7DB6AD" text="Agregar al carrito" OnClick="Agregar_Click" runat="server"></asp:button>
                                     
                                     </div>
                                 </div>

@@ -18,7 +18,7 @@ namespace TPC_Laurentino_Srebernich
         public int dni, Pago, Envio, idcli;
         public DateTime fecha_buscada;
         public bool encontro=false;
-        
+        public DatosCliente nuevocliente = new DatosCliente();
         protected void Page_Load(object sender, EventArgs e)
         {
             carritofinal = (List<Dominio.Carrito>)Session["listacarrito"];
@@ -52,12 +52,15 @@ namespace TPC_Laurentino_Srebernich
             
         }
 
-        protected void EnvioMail()
+        protected void enviar_mail()
         {
+            Page.Validate();
+            if (!Page.IsValid) return;
+
             EmailService emailservice = new EmailService();
-
-            //emailservice.armarcorreo(TextMail.Text, /*asunto*/, /*mensaje*/);
-
+            string cuerpomail;
+            cuerpomail = "Gracias por tu compra"; //mas los productos
+            emailservice.armarcorreo(nuevocliente.Mail, "compra", cuerpomail);
 
             try
             {
@@ -66,8 +69,10 @@ namespace TPC_Laurentino_Srebernich
             catch (Exception ex)
             {
 
-                throw ex;
+                Session.Add("error", ex);
             }
+
+
 
         }
 
@@ -78,53 +83,42 @@ namespace TPC_Laurentino_Srebernich
             Agregar_Cliente();
             Buscar_IdCliente();
             Agregar_Venta();
-            //busca id cliente por el dni
-            /*Datos_Cliente_Negocio consultaclientes = new Datos_Cliente_Negocio();
-            ListaClientes = consultaclientes.listar();
-            DatosCliente cli = new DatosCliente();
-            cli = ListaClientes.Find(x => x.DNI == dni );
-            //busca id venta por id cliente y fecha
-            VentaNegocio consultaventas = new VentaNegocio();
-            ListaVentas = consultaventas.listar();
-            Ventas venta = new Ventas();
-            
-            venta = ListaVentas.Find(x => x.ID_cliente == idcli);
-            int id = venta.ID;*/
             Consulta Buscar = new Consulta();
             int id = Buscar.Buscar_Id_Venta(idcli);
             Agregar_Producto_vendido(id);
-
+            enviar_mail();
+            Response.Redirect("Gracoasporsucompra.aspx");
 
         }
 
         protected void Agregar_Cliente ()
         {
             Consulta Agregar = new Consulta();
-            DatosCliente nuevo = new DatosCliente();
+            
             
             try
             {
-                nuevo.Mail = TextMail.Text;
-                nuevo.Apellido = TextApellido.Text;
-                nuevo.Nombre = TextNombre.Text;
-                nuevo.Telefono = Convert.ToInt32(TextTelefono.Text);
-                nuevo.Direccion = TextDireccion.Text;
-                nuevo.Numero = Convert.ToInt32(TextNumero.Text);
-                nuevo.Piso = Convert.ToInt32(TextPiso.Text);
-                nuevo.Entrecalles = TextEntrecalles.Text;
-                nuevo.Provincia = TextProvincia.Text;
-                nuevo.Localidad = TextLocalidad.Text;
-                nuevo.Cp = Convert.ToInt32(TextCodigoPostal.Text);
-                nuevo.Observaciones = TextObservaciones.Text;
-                nuevo.DNI = dni;
+                nuevocliente.Mail = TextMail.Text;
+                nuevocliente.Apellido = TextApellido.Text;
+                nuevocliente.Nombre = TextNombre.Text;
+                nuevocliente.Telefono = Convert.ToInt32(TextTelefono.Text);
+                nuevocliente.Direccion = TextDireccion.Text;
+                nuevocliente.Numero = Convert.ToInt32(TextNumero.Text);
+                nuevocliente.Piso = Convert.ToInt32(TextPiso.Text);
+                nuevocliente.Entrecalles = TextEntrecalles.Text;
+                nuevocliente.Provincia = TextProvincia.Text;
+                nuevocliente.Localidad = TextLocalidad.Text;
+                nuevocliente.Cp = Convert.ToInt32(TextCodigoPostal.Text);
+                nuevocliente.Observaciones = TextObservaciones.Text;
+                nuevocliente.DNI = dni;
 
                 if (encontro)
                 {
-                    Agregar.Modificar_Cliente(nuevo);
+                    Agregar.Modificar_Cliente(nuevocliente);
                 }
                 else
                 {
-                    Agregar.Agregar_Cliente(nuevo);
+                    Agregar.Agregar_Cliente(nuevocliente);
                 }
                
                                               
@@ -146,12 +140,12 @@ namespace TPC_Laurentino_Srebernich
 
             try
             {
-                nuevo.Fecha = DateTime.Now;
+               // nuevo.Fecha = DateTime.Now;
                 nuevo.ID_cliente = idcli;
                 nuevo.ID_Estado = 1;
                 nuevo.ID_MetodoPago = Pago;
                 nuevo.ID_TipoEnvio = Envio;
-                fecha_buscada = nuevo.Fecha;
+               // fecha_buscada = nuevo.Fecha;
 
                 Agregar.Agregar_Venta(nuevo);
 

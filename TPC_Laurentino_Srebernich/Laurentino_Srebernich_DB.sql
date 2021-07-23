@@ -173,6 +173,7 @@ INSERT INTO Usuarios values ('TestAdmin','Test2',2)
 
 create table Clientes(
 	ID int primary key not null identity (1,1),
+	Mail varchar(50) not null,
 	Nombre varchar(50) not null,
 	Apellido varchar(50) not null,
 	DNI int not null,
@@ -182,26 +183,45 @@ create table Clientes(
 	CP int not null,
 	Piso int not null,
 	EntreCalle varchar(70) not null,
-	Cod_Provincia int not null,
+	Provincia varchar(50) not null,
+	Localidad varchar(50) not null,
 	Observaciones varchar(150) not null
 )
 go
+
+insert into Clientes values ('pepe@pompin.com','Pepe','Pompin',123456,1564351278,'Calle conejin',12,1234,4,'La Madriguera y El Huerto','Conejo','Villa conejera','nada')
 
 Create table Metodo_Pago(
 	ID int primary key not null identity (1,1),
 	Metodo varchar(50) not null
 )
 go
+insert into Metodo_Pago values ('Transferencia')
+insert into Metodo_Pago values ('Mercadopago')
+insert into Metodo_Pago values ('Acuerdo con el vendedor')
+
 create table Tipo_Envio(
 	ID int primary key not null identity (1,1),
 	Envio varchar(50) not null
 )
 go
+insert into Tipo_Envio values ('Mercagoenvios')
+insert into Tipo_Envio values ('Retiro en el local')
+insert into Tipo_Envio values ('Acuerdo con el vendedor')
+
 create table Estado(
 	ID int primary key not null identity (1,1),
 	Estado varchar(50) not null
 )
 go
+insert into Estado values ('Pendiente de pago')
+insert into Estado values ('Pagado')
+insert into Estado values ('Empaquetado')
+insert into Estado values ('Enviado')
+insert into Estado values ('Recibido')
+insert into Estado values ('Rechazado')
+insert into Estado values ('finalizado')
+
 create table Venta(
 	ID int primary key not null identity (1,1),
 	Fecha date not null,
@@ -209,15 +229,18 @@ create table Venta(
 	Id_Estado int not null FOREIGN KEY REFERENCES Estado(ID),
 	Id_Metodo_Pago int not null FOREIGN KEY REFERENCES Metodo_Pago(ID),
 	Id_Tipo_Envio int not null FOREIGN KEY REFERENCES Tipo_Envio(ID),
-	)
-	go
+)
+go
 create table Prod_Venta (
 	ID int primary key not null identity (1,1),
 	Id_Venta int not null FOREIGN KEY REFERENCES Venta(ID),
 	Id_Prod int not null FOREIGN KEY REFERENCES Producto(ID),
-	Id_Color int not null FOREIGN KEY REFERENCES Color(ID),
+	Color varchar not null,
 	Cant int not null,
-	Id_Talle smallint not null FOREIGN KEY REFERENCES Talle(ID),
+	Talle varchar not null,
 	Precio money not null
 )
 go
+SELECT * FROM Venta
+select GETDATE()
+select MAX(V.ID) from Venta V where V.Id_Cli=1 and V.Id_Estado=1

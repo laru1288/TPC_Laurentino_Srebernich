@@ -395,7 +395,7 @@ namespace Negocio
             try
             {
                 
-                datos.SetearConsulta("insert into Venta (Fecha, Id_Cli, Id_Estado, Id_Metodo_Pago, Id_Tipo_Envio) values ('" + nuevo.Fecha + "', '" + nuevo.ID_cliente + "','" + nuevo.ID_Estado + "','" + nuevo.ID_MetodoPago + "','" + nuevo.ID_TipoEnvio + "')");
+                datos.SetearConsulta("insert into Venta (Fecha, Id_Cli, Id_Estado, Id_Metodo_Pago, Id_Tipo_Envio) values (GETDATE(), '" + nuevo.ID_cliente + "','" + nuevo.ID_Estado + "','" + nuevo.ID_MetodoPago + "','" + nuevo.ID_TipoEnvio + "')");
                 datos.EjecutarLectura();
             }
             catch (Exception ex)
@@ -418,12 +418,12 @@ namespace Negocio
             {
                 datos.setear_parametro("@idcli", id_cli);
                 
-                datos.SetearConsulta(string.Format("select ID from Venta where Id_Cli=@idcli and Id_Estado=1"));
+                datos.SetearConsulta("select MAX(V.ID) from Venta V where V.Id_Cli=@idcli");
                 datos.EjectutarAccion();
 
                 while (datos.Lector.Read())
                 {
-                    id = (Int32)datos.Lector["Id"];
+                    id = (Int32)datos.Lector["V.ID"];
                 }
 
                 
