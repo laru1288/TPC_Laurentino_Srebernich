@@ -9,10 +9,10 @@ namespace Dominio
    public class Ventas  {
         public int ID { get; set; }
 
-        public Fecha fecha;
+        public DateTime Fecha;
         public int ID_cliente { get; set; }
-        public Estado_venta Estado { get; set; }
-        public Metodo_Pago metodopago { get; set; }
-        public Tipo_Envio tipoenvio { get; set; }
+        public int ID_Estado  { get; set; }
+        public int ID_MetodoPago { get; set; }
+        public int ID_TipoEnvio { get; set; }
     }
 }

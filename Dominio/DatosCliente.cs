@@ -22,8 +22,8 @@ namespace Dominio
         public string Localidad { get; set; }
         public string Observaciones { get; set; }
 
-        public DatosCliente(int id, string mail, string name, string apelli, int dni, int tel, string dire, int num, int cp, int piso, string entrecalles, 
-            string prob, string localidad, string obsv )
+        public DatosCliente() { }
+       public DatosCliente(int id, string mail, string name, string apelli, int dni, int tel, string dire, int num, int cp, int piso, string entrecalles, string prob, string localidad, string obsv )
         {
             ID = id;
             Mail = mail;
@@ -40,6 +40,6 @@ namespace Dominio
             Localidad = localidad;
             Observaciones = obsv;
         }
-
+       
     }
 }

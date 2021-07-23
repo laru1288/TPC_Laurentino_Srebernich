@@ -10,19 +10,20 @@ namespace Dominio
         public int ID { get; set; }
         public int ID_Venta { get; set; }
         public int ID_codigo_producto { get; set; }
-        public int ID_Color { get; set; }
+        public String Color { get; set; }
         public int Cantidad { get; set; }
-        public int ID_talle { get; set; }
+        public String Talle { get; set; }
         public decimal Precio_vendido { get; set; }
 
-        public Producto_Vendido(int id, int idventa, int codigoproducto, int color, int cantidad, int talle, decimal precio)
+        public Producto_Vendido() { }
+        public Producto_Vendido(int id, int idventa, int codigoproducto, string color, int cantidad, string talle, decimal precio)
         {
             ID = id;
             ID_Venta = idventa;
             ID_codigo_producto = codigoproducto;
-            ID_Color = color;
+            Color = color;
             Cantidad = cantidad;
-            ID_talle = talle;
+            Talle = talle;
             Precio_vendido = precio;
         }
     }
