@@ -34,7 +34,7 @@ namespace TPC_Laurentino_Srebernich
 
         protected void B_aceptar_Click(object sender, EventArgs e)
         {
-            int DNI, Id_Pago = 1, Id_Envio=1;
+            int DNI, Id_Pago = 1, Id_Envio= 1;
 
             DNI = Convert.ToInt32(TextBoxdni.Text);
 
@@ -47,12 +47,12 @@ namespace TPC_Laurentino_Srebernich
             if (Motomensajeria.Checked) { Id_Envio = 3; }
 
 
-            Response.Redirect("Checkout.aspx?dni="+ DNI +"&pago=" + Id_Pago + "&envio" + Id_Envio);
-
+            Response.Redirect("Checkout.aspx?dni="+ DNI + "&pago=" + Id_Pago + "&envio=" + Id_Envio);
+            
 
         }
 
-        
+
 
 
     }
