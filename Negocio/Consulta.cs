@@ -375,7 +375,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("insert into Prod_Venta (Id_Venta, Id_Prod, Id_Color, Cant, Id_Talle, Precio) values ('" + nuevo.ID_Venta + "', '" + nuevo.ID_codigo_producto + "','" + nuevo.ID_Color + "','" + nuevo.Cantidad + "','" + nuevo.ID_talle + "','" + nuevo.Precio_vendido + "')");
+                datos.SetearConsulta("insert into Prod_Venta (Id_Venta, Id_Prod, Color, Cant, Talle, Precio) values ('" + nuevo.ID_Venta + "', '" + nuevo.ID_codigo_producto + "','" + nuevo.Color + "','" + nuevo.Cantidad + "','" + nuevo.Talle + "','" + nuevo.Precio_vendido + "')");
                 datos.EjecutarLectura();
             }
             catch (Exception ex)
@@ -394,7 +394,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("insert into Venta (Fecha, Id_Cli, Id_Estado, Id_Metodo_Pago, Id_Tipo_Envio) values ('" + nuevo.fecha + "', '" + nuevo.ID_cliente + "','" + nuevo.Estado + "','" + nuevo.metodopago + "','" + nuevo.tipoenvio + "')");
+                datos.SetearConsulta("insert into Venta (Fecha, Id_Cli, Id_Estado, Id_Metodo_Pago, Id_Tipo_Envio) values ('" + nuevo.Fecha + "', '" + nuevo.ID_cliente + "','" + nuevo.ID_Estado + "','" + nuevo.ID_MetodoPago + "','" + nuevo.ID_TipoEnvio + "')");
                 datos.EjecutarLectura();
             }
             catch (Exception ex)
