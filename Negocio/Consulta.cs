@@ -333,7 +333,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("insert into Clientes (Mail, Nombre, Apellido, DNI, Telefono, Direccion, Numero, CP, Piso, EntreCalle, Provincia, Localidad, Observaciones) values ('" + nuevo.Mail + "', '" + nuevo.Nombre + "','" + nuevo.Apellido + "','" + nuevo.DNI + "','" + nuevo.Telefono + "','" + nuevo.Direccion + "','" + nuevo.Numero + "','" + nuevo.Cp + "','" + nuevo.Piso + "','" + nuevo.Entrecalles + "','" + nuevo.Provincia + "','" + nuevo.Localidad + "','" + nuevo.Observaciones + "')");
+                datos.SetearConsulta("insert into Clientes (Mail, Nombre, Apellido, DNI, Telefono, Calle, Numero, CP, Piso, EntreCalle, Provincia, Localidad, Observaciones) values ('" + nuevo.Mail + "', '" + nuevo.Nombre + "','" + nuevo.Apellido + "','" + nuevo.DNI + "','" + nuevo.Telefono + "','" + nuevo.Direccion + "','" + nuevo.Numero + "','" + nuevo.Cp + "','" + nuevo.Piso + "','" + nuevo.Entrecalles + "','" + nuevo.Provincia + "','" + nuevo.Localidad + "','" + nuevo.Observaciones + "')");
                 datos.EjecutarLectura();
             }
             catch (Exception ex)
@@ -354,7 +354,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("update Clientes set Mail = '" + nuevo.Mail + "', Nombre = '" + nuevo.Nombre + "', Apellido = '" + nuevo.Apellido + "', DNI = '" + nuevo.DNI + "', Telefono = '" + nuevo.Telefono + "', Direccion = '" + nuevo.Direccion + "', Numero = '" + nuevo.Numero + "', CP = '" + nuevo.Cp + "', Piso = '" + nuevo.Piso + "', EntreCalle = '" + nuevo.Entrecalles + "', Provincia = '" + nuevo.Provincia + "', Localidad = '" + nuevo.Localidad + "', Observaciones = '" + nuevo.Observaciones + "' where ID ='" + nuevo.ID + "' ");
+                datos.SetearConsulta("update Clientes set Mail = '" + nuevo.Mail + "', Nombre = '" + nuevo.Nombre + "', Apellido = '" + nuevo.Apellido + "', DNI = '" + nuevo.DNI + "', Telefono = '" + nuevo.Telefono + "', Calle = '" + nuevo.Direccion + "', Numero = '" + nuevo.Numero + "', CP = '" + nuevo.Cp + "', Piso = '" + nuevo.Piso + "', EntreCalle = '" + nuevo.Entrecalles + "', Provincia = '" + nuevo.Provincia + "', Localidad = '" + nuevo.Localidad + "', Observaciones = '" + nuevo.Observaciones + "' where ID ='" + nuevo.ID + "' ");
                 datos.EjectutarAccion();
 
             }
@@ -394,6 +394,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
+                
                 datos.SetearConsulta("insert into Venta (Fecha, Id_Cli, Id_Estado, Id_Metodo_Pago, Id_Tipo_Envio) values ('" + nuevo.Fecha + "', '" + nuevo.ID_cliente + "','" + nuevo.ID_Estado + "','" + nuevo.ID_MetodoPago + "','" + nuevo.ID_TipoEnvio + "')");
                 datos.EjecutarLectura();
             }
@@ -408,6 +409,38 @@ namespace Negocio
             }
 
         }
+
+        public int Buscar_Id_Venta(int id_cli)
+        {
+            int id=0;
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setear_parametro("@idcli", id_cli);
+                
+                datos.SetearConsulta(string.Format("select ID from Venta where Id_Cli=@idcli and Id_Estado=1"));
+                datos.EjectutarAccion();
+
+                while (datos.Lector.Read())
+                {
+                    id = (Int32)datos.Lector["Id"];
+                }
+
+                
+            }
+            catch (Exception EX)
+            {
+
+                throw EX;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+            return id;
+        }
+
 
 
     }

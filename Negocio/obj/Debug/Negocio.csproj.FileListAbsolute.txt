@@ -79,3 +79,12 @@ C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio
 C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.dll
 C:\Users\Laura\Desktop\ttppp\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\bin\Debug\Negocio.dll
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\bin\Debug\Dominio.dll
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.dll
+C:\Users\Laura\Desktop\ptog3TPC\TPC_Laurentino_Srebernich\Negocio\obj\Debug\Negocio.pdb

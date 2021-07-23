@@ -7,21 +7,23 @@ using Dominio;
 
 namespace Negocio
 {
-    public class Producto_vendido_Negocio{
-        public List<Producto_Vendido> listar()
+    public class VentaNegocio
+    {
+
+        public List<Ventas> listar()
         {
 
-            List<Producto_Vendido> lista = new List<Producto_Vendido>();
+            List<Ventas> lista = new List<Ventas>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.SetearConsulta("select ID, Id_Venta, Id_Prod, Id_Color, Cant, Id_Talle, Precio from Prod_Venta ");
+                datos.SetearConsulta("Select ID, Fecha, Id_Cli, Id_Estado, Id_Metodo_Pago, Id_Tipo_Envio from Venta");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
                 {
-                    lista.Add(new Producto_Vendido((int)datos.Lector["ID"], (int)datos.Lector["Id_Venta"], (int)datos.Lector["Id_Prod"], (string)datos.Lector["Id_Color"], (int)datos.Lector["Cant"], (string)datos.Lector["Id_Talle"], (int)datos.Lector["Precio"]));
+                    lista.Add(new Ventas((int)datos.Lector["ID"], (DateTime)datos.Lector["Fecha"], (int)datos.Lector["Id_Cli"], (int)datos.Lector["Id_Estado"], (int)datos.Lector["Id_Metodo_Pago"], (int)datos.Lector["Id_Tipo_Envio"]));
                 }
                 return lista;
             }

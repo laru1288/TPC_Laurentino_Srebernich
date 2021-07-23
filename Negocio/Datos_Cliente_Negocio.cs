@@ -21,7 +21,7 @@ namespace Negocio
 
                 while (datos.Lector.Read())
                 {
-                    lista.Add(new DatosCliente((int)datos.Lector["ID"], (string)datos.Lector["Mail"], (string)datos.Lector["Nombre"], (string)datos.Lector["Apellido"], (int)datos.Lector["DNI"], (int)datos.Lector["Telefono"], (string)datos.Lector["Calle"], (int)datos.Lector["Numero"], (int)datos.Lector["CP"], (int)datos.Lector["Piso"], (string)datos.Lector["EntrCalle"], (string)datos.Lector["Provincia"], (string)datos.Lector["Localidad"], (string)datos.Lector["Observaciones"]));
+                    lista.Add(new DatosCliente((int)datos.Lector["ID"], (string)datos.Lector["Mail"], (string)datos.Lector["Nombre"], (string)datos.Lector["Apellido"], (int)datos.Lector["DNI"], (int)datos.Lector["Telefono"], (string)datos.Lector["Calle"], (int)datos.Lector["Numero"], (int)datos.Lector["CP"], (int)datos.Lector["Piso"], (string)datos.Lector["EntreCalle"], (string)datos.Lector["Provincia"], (string)datos.Lector["Localidad"], (string)datos.Lector["Observaciones"]));
                 }
                 return lista;
             }
