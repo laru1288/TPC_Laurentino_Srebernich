@@ -23,10 +23,10 @@ namespace TPC_Laurentino_Srebernich
         protected void B_agregar_sexo_Click(object sender, EventArgs e)
         {
             Page.Validate();
-            if (!Page.IsValid)
+            /*if (!Page.IsValid)
             {
                 return;
-            }
+            }*/
             Consulta Agregar = new Consulta();
             Sexo nuevo = new Sexo();
 

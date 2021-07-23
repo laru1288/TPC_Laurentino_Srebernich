@@ -29,10 +29,10 @@ namespace TPC_Laurentino_Srebernich
         {
             listacolores = Colores.listar();
             Aeditar = listacolores.Find(x => x.ID == id);
-            if (!IsPostBack)
+            /*if (!IsPostBack)
             {
                 cargar_datos(Aeditar);
-            }
+            }*/
         }
         protected void cargar_datos(Color Aeditar)
         {

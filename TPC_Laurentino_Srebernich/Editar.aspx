@@ -280,7 +280,7 @@
   
     <br />
     <br />
-    <asp:Button type="submit" Text="Agregar" ID="B_modificar" OnClientClick="return validar()" class="btn btn-primary" runat="server" Style="background-color:#7DB6AD" OnClick="B_modificar_Click" />
+    <asp:Button type="submit" Text="Modificar" ID="B_modificar" OnClientClick="return validar()" class="btn btn-primary" runat="server" Style="background-color:#7DB6AD" OnClick="B_modificar_Click" />
         <br />
          <br />
          <br />

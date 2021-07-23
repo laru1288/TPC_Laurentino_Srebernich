@@ -23,10 +23,10 @@ namespace TPC_Laurentino_Srebernich
         protected void B_agregar_color_Click(object sender, EventArgs e)
         {
             Page.Validate();
-            if (!Page.IsValid)
+            /*if (!Page.IsValid)
             {
                 return;
-            }
+            }*/
             Consulta Agregar = new Consulta();
             Color nuevo = new Color();
 

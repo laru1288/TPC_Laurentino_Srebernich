@@ -29,10 +29,10 @@ namespace TPC_Laurentino_Srebernich
         {
             listamarcas = Marcas.listar();
             Aeditar = listamarcas.Find(x => x.ID == id);
-            if (!IsPostBack)
+            /*if (!IsPostBack)
             {
                 cargar_datos(Aeditar);
-            }
+            }*/
         }
         protected void cargar_datos(Marca Aeditar)
         {

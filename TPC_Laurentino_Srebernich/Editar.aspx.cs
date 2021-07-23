@@ -120,11 +120,11 @@ namespace TPC_Laurentino_Srebernich
 
         protected void B_modificar_Click(object sender, EventArgs e)
         {
-            Page.Validate();
+            /*Page.Validate();
             if (!Page.IsValid)
             {
                 return;
-            }
+            }*/
 
             Consulta Modificar = new Consulta();
             Producto nuevo = new Producto();

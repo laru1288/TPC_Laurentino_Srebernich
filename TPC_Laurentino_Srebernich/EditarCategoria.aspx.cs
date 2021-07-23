@@ -32,10 +32,10 @@ namespace TPC_Laurentino_Srebernich
         {
             listacategorias = (List<Categoria>)Session["listacategorias"];
             Aeditar = listacategorias.Find(x => x.ID == id);
-            if (!IsPostBack)
+            /*if (!IsPostBack)
             {
                 cargar_datos(Aeditar);
-            }
+            }*/
         }
         protected void cargar_datos(Categoria Aeditar)
         {

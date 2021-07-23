@@ -29,10 +29,10 @@ namespace TPC_Laurentino_Srebernich
         {
             listatalles = Talles.listar();
             Aeditar = listatalles.Find(x => x.ID == id);
-            if (!IsPostBack)
+            /*if (!IsPostBack)
             {
                 cargar_datos(Aeditar);
-            }
+            }*/
         }
         protected void cargar_datos(Talle Aeditar)
         {

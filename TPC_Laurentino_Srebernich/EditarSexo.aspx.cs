@@ -29,10 +29,10 @@ namespace TPC_Laurentino_Srebernich
         {
             listasexo = Sexo.listar();
             Aeditar = listasexo.Find(x => x.ID == id);
-            if (!IsPostBack)
+           /* if (!IsPostBack)
             {
                 cargar_datos(Aeditar);
-            }
+            }*/
         }
         protected void cargar_datos(Sexo Aeditar)
         {

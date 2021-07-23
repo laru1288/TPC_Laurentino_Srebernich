@@ -55,7 +55,7 @@ namespace TPC_Laurentino_Srebernich
         protected void enviar_mail()
         {
             Page.Validate();
-            if (!Page.IsValid) return;
+            //if (!Page.IsValid) return;
 
             EmailService emailservice = new EmailService();
             string cuerpomail;
@@ -126,7 +126,7 @@ namespace TPC_Laurentino_Srebernich
             catch (Exception ex)
             {
 
-                throw ex;
+                Session.Add("error", ex);
             }
 
 
@@ -153,7 +153,7 @@ namespace TPC_Laurentino_Srebernich
             catch (Exception ex)
             {
 
-                throw ex;
+                Session.Add("error", ex);
             }
 
 
@@ -182,7 +182,7 @@ namespace TPC_Laurentino_Srebernich
             catch (Exception ex)
             {
 
-                throw ex;
+                Session.Add("error", ex);
             }
         }
 

@@ -24,9 +24,9 @@ namespace TPC_Laurentino_Srebernich
                 var aux = su.ToString("0.00");
                 lblTotal.Text = aux;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Session.Add("error", ex);
             }
 
         }
